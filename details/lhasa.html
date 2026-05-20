@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拉萨·布达拉宫 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../destinations.html" class="active">精选路线</a></li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../imgs/budalagong.png') center/cover;">
+        <div class="page-hero-content">
+            <h1>拉萨 · 布达拉宫</h1>
+            <p>世界最高的宫殿，藏传佛教的圣殿。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/tibet.html">西藏</a><span>></span><a href="../categories/tibet-culture.html">人文之旅</a><span>></span>拉萨·布达拉宫
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>布达拉宫坐落在西藏自治区拉萨市中心的红山之上，海拔3700多米，占地总面积36万余平方米，建筑总面积13万余平方米，主楼高117米，共13层。它是世界上海拔最高，集宫殿、城堡和寺院于一体的宏伟建筑，也是西藏最庞大、最完整的古代宫堡建筑群。</p>
+
+        <img src="../imgs/budalagongquanjing.png" alt="布达拉宫全景">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>西藏自治区拉萨市城关区</li>
+            <li><strong>海拔</strong>约3700米</li>
+            <li><strong>最佳季节</strong>5月—10月</li>
+            <li><strong>建议时长</strong>1—2天</li>
+            <li><strong>门票</strong>旺季200元 / 淡季100元（待核实）</li>
+            <li><strong>级别</strong>世界文化遗产 / AAAAA级景区</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>建议上午参观布达拉宫（需提前预约），下午前往大昭寺和八廓街。布达拉宫内部游览时间约2—3小时，主要参观白宫和红宫。白宫是达赖喇嘛的冬宫，红宫供奉着历代达赖喇嘛的灵塔。从布达拉宫出来后，可步行经北京中路前往大昭寺，沿途感受拉萨的城市气息。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 初到拉萨建议先适应1—2天再登山参观布达拉宫，避免高原反应。<br>2. 进入殿堂需脱帽、摘墨镜，不可穿短裤短裙。<br>3. 殿内禁止拍照，请尊重宗教场所规定。<br>4. 拉萨日照强烈，务必做好防晒。</p>
+
+        <h2>周边推荐</h2>
+        <p>大昭寺（步行15分钟）、八廓街（步行10分钟）、色拉寺（打车20分钟）、罗布林卡（打车15分钟）。如果时间充裕，可以安排纳木错一日游（单程约4小时车程）。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

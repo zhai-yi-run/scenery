@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 山野秘境</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="destinations.html">精选路线</a></li>
+            <li><a href="guides.html">游记攻略</a></li>
+            <li><a href="about.html" class="active">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero">
+        <div class="page-hero-content">
+            <h1>关于我们</h1>
+            <p>一群热爱山川湖海的年轻人，想把最美的中国风光分享给你。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="index.html">首页</a><span>></span>关于我们
+    </div>
+
+    <section class="container">
+        <div class="about-section">
+            <div class="about-text">
+                <h3>我们是谁</h3>
+                <p>山野秘境是一个由高校 Web 前端开发小组创建的户外旅行主题站点。我们来自不同的专业背景，但因对旅行和自然的热爱而聚在一起，希望通过技术与内容，将中国最美的山川秘境呈现给每一位访客。</p>
+            </div>
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="山野风光">
+            </div>
+        </div>
+
+        <div class="about-section">
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="团队理念">
+            </div>
+            <div class="about-text">
+                <h3>我们的理念</h3>
+                <p>我们相信，真正的旅行不是打卡和滤镜，而是走进山野、感受自然、发现自我。每一篇攻略都来自真实的行走体验，每一条路线都经过反复打磨。愿山野秘境成为你探索中国壮美山河的第一站。</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">联系我们</h2>
+        <div class="card-grid">
+            <div class="card" style="text-align: center; padding: 40px 25px;">
+                <div class="card-content">
+                    <h3>电子邮箱</h3>
+                    <p class="desc" style="height: auto;">contact@shanyemijing.cn</p>
+                    <p style="font-size: 12px; color: #aaa;">（待替换为真实邮箱）</p>
+                </div>
+            </div>
+            <div class="card" style="text-align: center; padding: 40px 25px;">
+                <div class="card-content">
+                    <h3>微信公众号</h3>
+                    <p class="desc" style="height: auto;">山野秘境</p>
+                    <p style="font-size: 12px; color: #aaa;">（待替换为真实二维码）</p>
+                </div>
+            </div>
+            <div class="card" style="text-align: center; padding: 40px 25px;">
+                <div class="card-content">
+                    <h3>项目说明</h3>
+                    <p class="desc" style="height: auto;">本网站为 Web 前端课程期末项目，仅供学习与演示使用，不涉及任何商业用途。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

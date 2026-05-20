@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大理古城 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../destinations.html" class="active">精选路线</a></li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1585411694317-ef32e8e74e9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>大理古城</h1>
+            <p>苍山为屏，洱海为镜。风花雪月的浪漫之城。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/yunnan.html">云南</a><span>></span><a href="../categories/yunnan-ancient.html">古镇风情</a><span>></span>大理古城
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>大理古城位于云南省大理白族自治州，背靠苍山、面朝洱海，是一座拥有1200多年历史的古城。大理是白族文化的发源地，以"风花雪月"（下关风、上关花、苍山雪、洱海月）闻名。古城内青石板路纵横交错，白族民居青瓦白墙，人民路和洋人街是游客最爱的休闲去处。</p>
+
+        <img src="https://images.unsplash.com/photo-1585411694317-ef32e8e74e9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="大理古城">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>云南省大理白族自治州</li>
+            <li><strong>海拔</strong>约1970米</li>
+            <li><strong>最佳季节</strong>3月—5月、9月—11月</li>
+            <li><strong>建议时长</strong>2—3天</li>
+            <li><strong>门票</strong>古城免费（部分景点收费）</li>
+            <li><strong>级别</strong>历史文化名城 / AAAA级</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>第一天：上午漫步古城人民路，逛复兴路步行街，下午前往崇圣寺三塔（大理的标志性建筑）。傍晚在古城南门城墙上散步看日落。第二天：租一辆自行车或电瓶车环洱海骑行，沿途经过喜洲古镇（品尝喜洲粑粑）、双廊古镇，在洱海边发呆喝茶。第三天：乘坐索道上苍山，俯瞰洱海全景。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 大理紫外线强，骑行时务必做好防晒。<br>2. 环洱海全程约120公里，电动车需确认电量足够返回。<br>3. 喜洲粑粑和烤乳扇是必尝的白族小吃。<br>4. 大理气候宜人，但早晚偏凉，带一件薄外套即可。</p>
+
+        <h2>周边推荐</h2>
+        <p>喜洲古镇（白族民居和稻田风光，车程约30分钟）、双廊古镇（洱海东北岸的渔村，车程约1小时）、沙溪古镇（茶马古道上幸存的古集市，车程约2小时）。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

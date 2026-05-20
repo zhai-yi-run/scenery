@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新疆草原湖泊 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../destinations.html" class="active">精选路线</a></li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1504280317859-9c6cce36bca0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>新疆草原湖泊</h1>
+            <p>天山脚下，草原辽阔，湖泊湛蓝。北疆的每一帧都是壁纸。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/xinjiang.html">新疆</a><span>></span>草原湖泊
+    </div>
+
+    <section class="container">
+        <h2 class="section-title">草原湖泊线路推荐</h2>
+        <div class="card-grid">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1504280317859-9c6cce36bca0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="喀纳斯">
+                <div class="card-content">
+                    <h3>喀纳斯</h3>
+                    <div class="tags">
+                        <span class="tag">人间仙境</span>
+                        <span class="tag">图瓦村落</span>
+                    </div>
+                    <p class="desc">喀纳斯湖的碧蓝、月亮湾的蜿蜒、禾木村的晨雾——北疆最经典的风景线，9月秋季更是色彩的天堂。</p>
+                    <a href="../details/kanas.html" class="read-more">查看详情 ></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1595057061954-7ac9a7f07c96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="那拉提">
+                <div class="card-content">
+                    <h3>那拉提草原</h3>
+                    <div class="tags">
+                        <span class="tag">空中草原</span>
+                        <span class="tag">哈萨克</span>
+                    </div>
+                    <p class="desc">"空中草原"那拉提，海拔2000多米的高山草原。夏季野花遍地，雪山森林环绕，是哈萨克牧民的夏牧场。</p>
+                    <a href="../details/kanas.html" class="read-more">查看详情 ></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1597424327448-5e0d7a74b17c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="赛里木湖">
+                <div class="card-content">
+                    <h3>赛里木湖</h3>
+                    <div class="tags">
+                        <span class="tag">大西洋眼泪</span>
+                        <span class="tag">环湖公路</span>
+                    </div>
+                    <p class="desc">"大西洋的最后一滴眼泪"。赛里木湖是新疆海拔最高、面积最大的高山冷水湖，湖水湛蓝，环湖公路被誉为中国最美公路之一。</p>
+                    <a href="../details/kanas.html" class="read-more">查看详情 ></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

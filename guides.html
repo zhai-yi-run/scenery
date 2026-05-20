@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游记攻略 - 山野秘境</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="destinations.html">精选路线</a></li>
+            <li><a href="guides.html" class="active">游记攻略</a></li>
+            <li><a href="about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero">
+        <div class="page-hero-content">
+            <h1>游记攻略</h1>
+            <p>真实的旅途笔记，实用的出行指南。从装备清单到路线规划，这里都有。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="index.html">首页</a><span>></span>游记攻略
+    </div>
+
+    <section class="container">
+        <h2 class="section-title">最新游记</h2>
+
+        <div class="guide-card">
+            <img src="https://images.unsplash.com/photo-1529921879218-f99546d03a9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="拉萨游记">
+            <div class="guide-card-content">
+                <h3>拉萨七日漫游记：日光之城的慢时光</h3>
+                <p class="desc">在布达拉宫脚下晒太阳，在八廓街转经，在大昭寺前发呆。七天时间，足够爱上这座海拔3650米的城市。</p>
+                <div class="tags">
+                    <span class="tag">西藏</span>
+                    <span class="tag">人文</span>
+                    <span class="tag">深度游</span>
+                </div>
+                <span class="meta">作者：山野旅人 · 2026年4月</span>
+            </div>
+        </div>
+
+        <div class="guide-card">
+            <img src="https://images.unsplash.com/photo-1574751093139-445695ab202e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="九寨沟攻略">
+            <div class="guide-card-content">
+                <h3>九寨沟全攻略：最佳季节、路线与避坑指南</h3>
+                <p class="desc">秋季的九寨沟是色彩的海洋。这篇攻略详细整理了门票、交通、住宿和三条推荐游览路线，助你轻松出行。</p>
+                <div class="tags">
+                    <span class="tag">四川</span>
+                    <span class="tag">自然</span>
+                    <span class="tag">攻略</span>
+                </div>
+                <span class="meta">作者：背包小川 · 2026年3月</span>
+            </div>
+        </div>
+
+        <div class="guide-card">
+            <img src="https://images.unsplash.com/photo-1585411694317-ef32e8e74e9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="大理游记">
+            <div class="guide-card-content">
+                <h3>在大理，把日子过成诗——古城慢生活指南</h3>
+                <p class="desc">洱海骑行、古城赶集、喜洲吃粑粑。大理不需要攻略，但如果你只有三天，这篇可以帮你抓住精华。</p>
+                <div class="tags">
+                    <span class="tag">云南</span>
+                    <span class="tag">古镇</span>
+                    <span class="tag">慢生活</span>
+                </div>
+                <span class="meta">作者：南风知我意 · 2026年5月</span>
+            </div>
+        </div>
+
+        <div class="guide-card">
+            <img src="https://images.unsplash.com/photo-1504280317859-9c6cce36bca0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="喀纳斯攻略">
+            <div class="guide-card-content">
+                <h3>喀纳斯徒步：从贾登峪到禾木的秋日童话</h3>
+                <p class="desc">9月下旬的喀纳斯，白桦金黄、湖水碧蓝。两天徒步，穿越中国最美的秋色走廊，遇见图瓦人的木屋村落。</p>
+                <div class="tags">
+                    <span class="tag">新疆</span>
+                    <span class="tag">徒步</span>
+                    <span class="tag">秋季</span>
+                </div>
+                <span class="meta">作者：风从西来 · 2026年2月</span>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

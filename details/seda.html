@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>色达·五明佛学院 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../destinations.html" class="active">精选路线</a></li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1605101138446-f783e1977f49?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>色达 · 五明佛学院</h1>
+            <p>满山红色僧舍，世界上最震撼的信仰之城。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/tibet.html">西藏</a><span>></span><a href="../categories/tibet-culture.html">人文之旅</a><span>></span>色达
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>色达五明佛学院位于四川省甘孜藏族自治州色达县，海拔约4000米，是世界上最大的藏传佛学院。1980年由晋美彭措法王创办，如今满山遍野的红色小木屋是数以万计的僧侣和觉姆（女性修行者）的居所。从高处俯瞰，绛红色的僧舍密密麻麻布满山谷，景象极为震撼。</p>
+
+        <img src="https://images.unsplash.com/photo-1605101138446-f783e1977f49?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="色达五明佛学院">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>四川省甘孜州色达县</li>
+            <li><strong>海拔</strong>约4000米</li>
+            <li><strong>最佳季节</strong>5月—10月</li>
+            <li><strong>建议时长</strong>1—2天</li>
+            <li><strong>门票</strong>免费（需预约入园，待核实）</li>
+            <li><strong>级别</strong>宗教活动场所 / 人文景观</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>从色达县城乘车约20分钟到达佛学院入口，换乘内部公交车上山。建议先到坛城（佛学院最高点），转经祈福，然后沿步道步行下山，穿过红色僧舍区，近距离感受修行者的日常生活。傍晚时分，在大经堂广场可以看到喇嘛们辩经的震撼场面。日落后的佛学院灯火点点，夜景同样壮观。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 色达海拔4000米，务必提前适应高原环境，携带抗高反药物。<br>2. 拍摄僧侣和觉姆时请先征得对方同意，尊重信仰与隐私。<br>3. 佛学院内禁止吸烟、饮酒，请尊重宗教场所规定。<br>4. 色达气候寒冷多变，即使夏季夜间温度也可能接近0℃。</p>
+
+        <h2>周边推荐</h2>
+        <p>天葬台（藏区最大天葬台之一，请保持庄严肃穆，禁止拍照）、金马草原（色达县城附近的高山草原）、东嘎寺（色达三大寺庙之一）。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

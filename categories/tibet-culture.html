@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西藏人文之旅 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../destinations.html" class="active">精选路线</a></li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1529921879218-f99546d03a9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>西藏人文之旅</h1>
+            <p>在经幡与梵音中，感受藏地信仰的力量。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/tibet.html">西藏</a><span>></span>人文之旅
+    </div>
+
+    <section class="container">
+        <h2 class="section-title">人文线路推荐</h2>
+        <div class="card-grid">
+
+            <div class="card">
+                <img src="../imgs/lasa.png" alt="拉萨布达拉宫">
+                <div class="card-content">
+                    <h3>拉萨 · 布达拉宫</h3>
+                    <div class="tags">
+                        <span class="tag">世界遗产</span>
+                        <span class="tag">藏传佛教</span>
+                    </div>
+                    <p class="desc">海拔3700米的红山之上，布达拉宫屹立千年。走进这座世界最高的宫殿，聆听松赞干布与文成公主的千年故事。</p>
+                    <a href="../details/lhasa.html" class="read-more">查看详情 ></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../imgs/da.png" alt="色达">
+                <div class="card-content">
+                    <h3>色达 · 五明佛学院</h3>
+                    <div class="tags">
+                        <span class="tag">佛学院</span>
+                        <span class="tag">红色僧舍</span>
+                    </div>
+                    <p class="desc">满山遍野的红色木屋，数以万计的修行者。色达五明佛学院是世界上最大的藏传佛学院，震撼心灵的信仰之城。</p>
+                    <a href="../details/seda.html" class="read-more">查看详情 ></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../imgs/fu.png" alt="大昭寺">
+                <div class="card-content">
+                    <h3>拉萨 · 大昭寺</h3>
+                    <div class="tags">
+                        <span class="tag">世界遗产</span>
+                        <span class="tag">朝圣圣地</span>
+                    </div>
+                    <p class="desc">"先有大昭寺，后有拉萨城"。这里是藏传佛教最神圣的寺庙，每天都有无数信徒在此磕长头朝拜。</p>
+                    <a href="../details/lhasa.html" class="read-more">查看详情 ></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

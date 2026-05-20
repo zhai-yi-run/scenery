@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>稻城亚丁 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../destinations.html" class="active">精选路线</a></li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1597520846016-039819aea48b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>稻城亚丁</h1>
+            <p>"蓝色星球上最后一片净土"。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/sichuan.html">四川</a><span>></span><a href="../categories/sichuan-heritage.html">自然遗产</a><span>></span>稻城亚丁
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>稻城亚丁位于四川省甘孜藏族自治州稻城县香格里拉镇，地处青藏高原东部。这里有三座呈"品"字形排列的雪山——仙乃日（海拔6032米）、央迈勇（5958米）和夏诺多吉（5958米），被誉为"三怙主神山"。亚丁自然保护区以其原始的高原生态和震撼的雪山景观而闻名。</p>
+
+        <img src="https://images.unsplash.com/photo-1597520846016-039819aea48b?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="稻城亚丁">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>四川省甘孜州稻城县</li>
+            <li><strong>海拔</strong>景区2900—6032米</li>
+            <li><strong>最佳季节</strong>9月—10月（秋季）</li>
+            <li><strong>建议时长</strong>2—3天</li>
+            <li><strong>门票</strong>150元+观光车120元（待核实）</li>
+            <li><strong>级别</strong>国家级自然保护区 / AAAA级</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>第一天：从香格里拉镇乘观光车进入景区，徒步冲古寺至珍珠海，近距离仰望仙乃日神山。第二天：挑战长线——洛绒牛场至牛奶海（海拔4600米）和五色海（海拔4700米），这是亚丁最经典的徒步路线，全程往返约10公里，需5—7小时。如体力不支可选择骑马至牛奶海下方。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 亚丁景区平均海拔4000米以上，务必提前在稻城县城（3700米）适应1天。<br>2. 牛奶海徒步路线陡峭且海拔高，量力而行，准备氧气瓶。<br>3. 景区内餐饮和住宿条件有限，建议自备干粮和水。<br>4. 10月中下旬是最佳秋色观赏期，也是游客最多的时候。</p>
+
+        <h2>周边推荐</h2>
+        <p>海子山自然保护区（古冰帽遗迹）、稻城白塔、桑堆红草地（10月变红，仅存一小片）。从成都出发自驾约2天，沿途经过康定、新都桥等川西经典风景点。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

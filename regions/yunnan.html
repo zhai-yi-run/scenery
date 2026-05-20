@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云南线路 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../destinations.html" class="active">精选路线</a></li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1585411694317-ef32e8e74e9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>云南</h1>
+            <p>彩云之南，风花雪月。在古城巷陌与雪山湖泊间寻找诗与远方。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span>云南
+    </div>
+
+    <section class="container">
+        <h2 class="section-title">云南线路分类</h2>
+        <div class="card-grid">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1585411694317-ef32e8e74e9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="云南古镇">
+                <div class="card-content">
+                    <h3>云南古镇风情</h3>
+                    <div class="tags">
+                        <span class="tag">大理</span>
+                        <span class="tag">丽江</span>
+                        <span class="tag">古城</span>
+                    </div>
+                    <p class="desc">大理的苍山洱海，丽江的四方街巷，香格里拉的月光古城。每座古城都有属于自己的故事与温度。</p>
+                    <a href="../categories/yunnan-ancient.html" class="read-more">查看线路 ></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="云南自然">
+                <div class="card-content">
+                    <h3>云南自然奇观</h3>
+                    <div class="tags">
+                        <span class="tag">梅里雪山</span>
+                        <span class="tag">泸沽湖</span>
+                        <span class="tag">梯田</span>
+                    </div>
+                    <p class="desc">梅里雪山的日照金山，元阳梯田的光影变幻，泸沽湖的摩梭风情——云南的自然从不让人失望。</p>
+                    <a href="../categories/yunnan-ancient.html" class="read-more">查看线路 ></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

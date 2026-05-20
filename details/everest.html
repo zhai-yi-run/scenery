@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>珠穆朗玛峰 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../destinations.html" class="active">精选路线</a></li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../imgs/zhumulangmafeng.png') center/cover;">
+        <div class="page-hero-content">
+            <h1>珠穆朗玛峰</h1>
+            <p>地球之巅，勇敢者的终极向往。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/tibet.html">西藏</a><span>></span><a href="../categories/tibet-nature.html">自然风光</a><span>></span>珠穆朗玛峰
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>珠穆朗玛峰，藏语意为"圣母"，位于中国与尼泊尔边境线上，是世界最高峰。岩面高程8844.43米，雪面高程8848.86米。珠峰北部位于中国西藏日喀则市定日县境内，珠峰大本营是大多数旅行者能够到达的离珠峰最近的地方。</p>
+
+        <img src="../imgs/zmlmf.png" alt="珠峰全景">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>西藏日喀则市定日县</li>
+            <li><strong>大本营海拔</strong>约5200米</li>
+            <li><strong>最佳季节</strong>4月—5月、9月—10月</li>
+            <li><strong>建议时长</strong>2—3天</li>
+            <li><strong>门票</strong>180元/人+车辆进山费（待核实）</li>
+            <li><strong>级别</strong>世界自然遗产 / 国家级自然保护区</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>从日喀则出发，经拉孜、定日前往珠峰大本营，全程约340公里。沿途经过嘉措拉山口（海拔5248米）和加乌拉山口（海拔5198米），后者可同时眺望包括珠峰在内的5座8000米以上山峰。到达大本营后，可徒步至绒布寺附近观景台，近距离仰望珠峰北坡。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 大本营海拔5200米，务必提前在日喀则（3800米）适应高原环境。<br>2. 昼夜温差极大，夏季夜间也接近0℃，需携带厚羽绒服。<br>3. 需提前办理边防证（可在日喀则或拉萨办理）。<br>4. 珠峰地区天气变化无常，请预留灵活调整行程的时间。</p>
+
+        <h2>周边推荐</h2>
+        <p>绒布寺（世界海拔最高的寺庙）、佩枯错（日喀则地区最大的湖泊）、萨迦寺（藏传佛教萨迦派主寺）。如果时间充裕，可继续向西前往阿里地区。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

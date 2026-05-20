@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精选路线 - 山野秘境</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="destinations.html" class="active">精选路线</a></li>
+            <li><a href="guides.html">游记攻略</a></li>
+            <li><a href="about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero">
+        <div class="page-hero-content">
+            <h1>精选路线</h1>
+            <p>每一条路线，都是用心打磨的远方。选择你向往的方向，出发吧。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="index.html">首页</a><span>></span>精选路线
+    </div>
+
+    <section class="container">
+        <h2 class="section-title">按地区探索</h2>
+        <div class="card-grid">
+
+            <div class="card">
+                <img src="imgs/xizang.png" alt="西藏">
+                <div class="card-content">
+                    <h3>西藏</h3>
+                    <div class="tags">
+                        <span class="tag">雪域高原</span>
+                        <span class="tag">人文圣地</span>
+                    </div>
+                    <p class="desc">世界屋脊，信仰之地。从拉萨到珠峰，从圣湖到寺庙，感受最震撼的高原风光与藏地文化。</p>
+                    <a href="regions/tibet.html" class="read-more">探索西藏 ></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="imgs/sichuan.png" alt="四川">
+                <div class="card-content">
+                    <h3>四川</h3>
+                    <div class="tags">
+                        <span class="tag">天府之国</span>
+                        <span class="tag">自然遗产</span>
+                    </div>
+                    <p class="desc">天府之国，山水如画。九寨沟、稻城亚丁、川西雪山群，每一处都是大自然的精心雕琢。</p>
+                    <a href="regions/sichuan.html" class="read-more">探索四川 ></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="imgs/yunnan.png" alt="云南">
+                <div class="card-content">
+                    <h3>云南</h3>
+                    <div class="tags">
+                        <span class="tag">彩云之南</span>
+                        <span class="tag">古镇风情</span>
+                    </div>
+                    <p class="desc">彩云之南，风花雪月。大理、丽江、香格里拉，在古城巷陌与雪山湖泊间寻找诗与远方。</p>
+                    <a href="regions/yunnan.html" class="read-more">探索云南 ></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="imgs/xinjiang.png" alt="新疆">
+                <div class="card-content">
+                    <h3>新疆</h3>
+                    <div class="tags">
+                        <span class="tag">西域秘境</span>
+                        <span class="tag">草原湖泊</span>
+                    </div>
+                    <p class="desc">辽阔西域，极致风光。喀纳斯、那拉提、赛里木湖，天山南北，四季皆是画卷。</p>
+                    <a href="regions/xinjiang.html" class="read-more">探索新疆 ></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    // 1. 滚动事件：导航栏样式 + 返回顶部按钮显示
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    // 2. 返回顶部按钮点击：平滑滚动到顶部
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

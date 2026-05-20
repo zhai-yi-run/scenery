@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西藏自然风光 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../destinations.html" class="active">精选路线</a></li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1627725902102-181cf8a1923c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>西藏自然风光</h1>
+            <p>仰望世界之巅，漫步雪域桃源。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/tibet.html">西藏</a><span>></span>自然风光
+    </div>
+
+    <section class="container">
+        <h2 class="section-title">自然线路推荐</h2>
+        <div class="card-grid">
+
+            <div class="card">
+                <img src="../imgs/zhumulangmafeng.png" alt="珠穆朗玛峰">
+                <div class="card-content">
+                    <h3>珠穆朗玛峰</h3>
+                    <div class="tags">
+                        <span class="tag">世界之巅</span>
+                        <span class="tag">极限探险</span>
+                    </div>
+                    <p class="desc">岩面高程8844.43米，雪面高程8848.86米。地球之巅，勇敢者的终极挑战。大本营路线适合普通旅行者仰望世界最高峰。</p>
+                    <a href="../details/everest.html" class="read-more">查看详情 ></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1559637309-20cbce07b629?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="林芝桃花">
+                <div class="card-content">
+                    <h3>林芝 · 桃花沟</h3>
+                    <div class="tags">
+                        <span class="tag">桃花</span>
+                        <span class="tag">西藏江南</span>
+                    </div>
+                    <p class="desc">每年三月，林芝桃花盛开，雪山、峡谷与粉红花海交相辉映。海拔仅2900米，是进藏适应高原的理想第一站。</p>
+                    <a href="../details/linzhi.html" class="read-more">查看详情 ></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519741348484-b9c2c2b62ee2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="纳木错">
+                <div class="card-content">
+                    <h3>纳木错 · 天湖</h3>
+                    <div class="tags">
+                        <span class="tag">圣湖</span>
+                        <span class="tag">海拔4718米</span>
+                    </div>
+                    <p class="desc">西藏三大圣湖之一，湖面海拔4718米。湛蓝湖水与念青唐古拉雪山相映，是每个进藏旅人必去的朝圣之地。</p>
+                    <a href="../details/everest.html" class="read-more">查看详情 ></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

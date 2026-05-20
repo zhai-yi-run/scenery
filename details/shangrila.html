@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>香格里拉 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../destinations.html" class="active">精选路线</a></li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>香格里拉</h1>
+            <p>詹姆斯·希尔顿笔下的世外桃源，藏区文化的高原秘境。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/yunnan.html">云南</a><span>></span><a href="../categories/yunnan-ancient.html">古镇风情</a><span>></span>香格里拉
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>香格里拉，原名中甸，位于云南省迪庆藏族自治州，是滇、川、藏三省区交界地。这里是詹姆斯·希尔顿小说《消失的地平线》中描述的世外桃源，也是世人追寻的"香巴拉"。高原草甸、雪山峡谷、藏传佛教寺庙构成了香格里拉的独特风貌。</p>
+
+        <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="香格里拉">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>云南省迪庆藏族自治州</li>
+            <li><strong>海拔</strong>约3300米</li>
+            <li><strong>最佳季节</strong>5月—10月</li>
+            <li><strong>建议时长</strong>2—3天</li>
+            <li><strong>代表景点</strong>独克宗古城、松赞林寺、普达措</li>
+            <li><strong>级别</strong>国家公园 / 历史文化名城</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>第一天：上午参观噶丹·松赞林寺（云南最大的藏传佛教寺院），下午漫步独克宗古城，转动大佛寺的世界最大转经筒。第二天：全天游览普达措国家公园，欣赏属都湖和碧塔海的高原湖泊风光。第三天：前往纳帕海依拉草原，感受高原湿地的辽阔与宁静。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 香格里拉海拔较高，初到需适应，避免剧烈运动。<br>2. 松赞林寺参观需遵守宗教礼仪，殿内禁止拍照。<br>3. 6—7月是杜鹃花盛开的季节，草原一片花海。<br>4. 早晚温差大，夏季也需备一件外套。</p>
+
+        <h2>周边推荐</h2>
+        <p>梅里雪山（飞来寺观日照金山，车程约4小时）、虎跳峡（世界最深峡谷之一，车程约2小时）、白水台（"仙人遗田"钙华景观，车程约2.5小时）。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

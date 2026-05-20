@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九寨沟 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../destinations.html" class="active">精选路线</a></li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../imgs/jiuzhaigoutu.png') center/cover;">
+        <div class="page-hero-content">
+            <h1>九寨沟</h1>
+            <p>"九寨归来不看水"，童话世界般的山水画卷。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/sichuan.html">四川</a><span>></span><a href="../categories/sichuan-heritage.html">自然遗产</a><span>></span>九寨沟
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>九寨沟位于四川省阿坝藏族羌族自治州九寨沟县境内，是中国第一个以保护自然风景为主要目的的自然保护区。因沟内有树正、荷叶、则查洼等九个藏族村寨而得名。九寨沟以翠海、叠瀑、彩林、雪峰、藏情、蓝冰"六绝"闻名于世，1992年被列入世界自然遗产名录。</p>
+
+        <img src="../imgs/caichi.png" alt="九寨沟彩池">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>四川省阿坝州九寨沟县</li>
+            <li><strong>海拔</strong>2000—4700米</li>
+            <li><strong>最佳季节</strong>9月—11月（秋季彩林）</li>
+            <li><strong>建议时长</strong>1—2天</li>
+            <li><strong>门票</strong>旺季169元+观光车90元（待核实）</li>
+            <li><strong>级别</strong>世界自然遗产 / AAAAA级景区</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>九寨沟景区呈"Y"字形分布，建议从沟口乘观光车直达日则沟最上端的原始森林，然后自上而下游览：原始森林→箭竹海→熊猫海→五花海→珍珠滩瀑布→诺日朗瀑布。下午游览则查洼沟：长海→五彩池，最后返回树正沟游览树正群海和盆景滩。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 景区内禁止无人机飞行，请遵守规定。<br>2. 沟内海拔较高，注意防寒保暖，即使夏季也建议带一件薄外套。<br>3. 建议自带午餐，景区内餐饮选择有限且价格较高。<br>4. 秋季（10月中下旬）是彩林最佳观赏期，也是游客高峰期，建议提前预订门票和住宿。</p>
+
+        <h2>周边推荐</h2>
+        <p>黄龙（车程约2.5小时）、松潘古城（车程约1.5小时）、牟尼沟（车程约1小时）。建议将九寨沟与黄龙安排在同一行程中，两个世界遗产相距不远。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

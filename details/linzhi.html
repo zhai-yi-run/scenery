@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林芝·桃花沟 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../destinations.html" class="active">精选路线</a></li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1559637309-20cbce07b629?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>林芝 · 桃花沟</h1>
+            <p>西藏江南，雪域桃源。每年三月，桃花与雪山同框。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/tibet.html">西藏</a><span>></span><a href="../categories/tibet-nature.html">自然风光</a><span>></span>林芝
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>林芝位于西藏东南部，雅鲁藏布江中下游，平均海拔仅2900米，是西藏海拔最低的地区，被誉为"西藏江南"。每年3月下旬至4月中旬，林芝桃花盛开，雪山、峡谷与粉红花海交相辉映。这里的桃花多为野生古桃树，树龄可达数百年，与内地桃花截然不同。</p>
+
+        <img src="https://images.unsplash.com/photo-1559637309-20cbce07b629?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="林芝桃花">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>西藏林芝市</li>
+            <li><strong>海拔</strong>约2900米</li>
+            <li><strong>最佳季节</strong>3月下旬—4月中旬</li>
+            <li><strong>建议时长</strong>2—3天</li>
+            <li><strong>门票</strong>嘎拉桃花村约30元（待核实）</li>
+            <li><strong>级别</strong>国家森林城市</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>第一天：从拉萨乘车沿318国道东行约5小时抵达林芝市区（八一镇），途中翻越海拔5013米的米拉山口。下午游览嘎拉桃花村，这是林芝桃花节的主会场。第二天：前往波密桃花沟，这里是林芝桃花最密集的区域，沿途雪山、青稞田与桃花构成绝美画面。第三天：游览雅鲁藏布大峡谷和南迦巴瓦峰（"中国最美山峰"）。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 林芝海拔较低，是从内地进藏适应高原的理想第一站。<br>2. 桃花花期短暂（约20天），提前关注桃花节时间。<br>3. 3—4月林芝早晚仍较冷，需准备保暖外套。<br>4. 南迦巴瓦峰常年云雾缭绕，能否看到"日照金山"全凭运气。</p>
+
+        <h2>周边推荐</h2>
+        <p>雅鲁藏布大峡谷（世界第一大峡谷）、南迦巴瓦峰（海拔7782米）、巴松措（藏东最大的堰塞湖）、鲁朗林海（"叫人不想家"的高原牧场）。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

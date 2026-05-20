@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四川线路 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../destinations.html" class="active">精选路线</a></li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1574751093139-445695ab202e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>四川</h1>
+            <p>天府之国，山水如画。从雪山到峡谷，从彩林到圣湖。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span>四川
+    </div>
+
+    <section class="container">
+        <h2 class="section-title">四川线路分类</h2>
+        <div class="card-grid">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1574751093139-445695ab202e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="四川自然遗产">
+                <div class="card-content">
+                    <h3>四川自然遗产</h3>
+                    <div class="tags">
+                        <span class="tag">九寨沟</span>
+                        <span class="tag">稻城亚丁</span>
+                        <span class="tag">世界遗产</span>
+                    </div>
+                    <p class="desc">"九寨归来不看水"，"蓝色星球上最后一片净土"。两大世界级自然遗产，成就四川最经典的风景线。</p>
+                    <a href="../categories/sichuan-heritage.html" class="read-more">查看线路 ></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1544642899-2bcf1e9ebd47?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="川西雪山">
+                <div class="card-content">
+                    <h3>川西雪山秘境</h3>
+                    <div class="tags">
+                        <span class="tag">贡嘎</span>
+                        <span class="tag">四姑娘山</span>
+                        <span class="tag">徒步</span>
+                    </div>
+                    <p class="desc">贡嘎、四姑娘山、雅拉雪山……川西高原上的雪山群是户外爱好者的天堂，每一条徒步路线都震撼人心。</p>
+                    <a href="../categories/sichuan-mountain.html" class="read-more">查看线路 ></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云南古镇风情 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">山野秘境</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../destinations.html" class="active">精选路线</a></li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1585411694317-ef32e8e74e9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>云南古镇风情</h1>
+            <p>苍山洱海边，古城巷陌里，寻找诗与远方。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/yunnan.html">云南</a><span>></span>古镇风情
+    </div>
+
+    <section class="container">
+        <h2 class="section-title">古镇线路推荐</h2>
+        <div class="card-grid">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1585411694317-ef32e8e74e9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="大理古城">
+                <div class="card-content">
+                    <h3>大理古城</h3>
+                    <div class="tags">
+                        <span class="tag">苍山洱海</span>
+                        <span class="tag">白族文化</span>
+                    </div>
+                    <p class="desc">苍山为屏，洱海为镜。大理古城背靠苍山、面朝洱海，在古城人民路上漫步，感受"风花雪月"的浪漫与闲适。</p>
+                    <a href="../details/dali.html" class="read-more">查看详情 ></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="香格里拉">
+                <div class="card-content">
+                    <h3>香格里拉</h3>
+                    <div class="tags">
+                        <span class="tag">月光之城</span>
+                        <span class="tag">藏区文化</span>
+                    </div>
+                    <p class="desc">詹姆斯·希尔顿笔下的世外桃源。独克宗古城转动世界最大的转经筒，松赞林寺的金顶在阳光下熠熠生辉。</p>
+                    <a href="../details/shangrila.html" class="read-more">查看详情 ></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1540331547305-aee1f7be81d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="丽江古城">
+                <div class="card-content">
+                    <h3>丽江古城</h3>
+                    <div class="tags">
+                        <span class="tag">世界遗产</span>
+                        <span class="tag">纳西文化</span>
+                    </div>
+                    <p class="desc">世界文化遗产丽江古城，以四方街为中心，水巷交错、石桥相连。夜晚的酒吧街与清晨的石板路，是完全不同的丽江。</p>
+                    <a href="../details/shangrila.html" class="read-more">查看详情 ></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+</body>
+</html>
