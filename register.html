@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册 - 山野秘境</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+    <div class="auth-container">
+        <h2>创建账号</h2>
+        <p class="subtitle">注册山野秘境，开启你的山川之旅</p>
+
+        <form id="register-form" novalidate>
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="text" id="username" placeholder="4-16位字母、数字或下划线" autocomplete="username">
+                <span class="error-msg" id="username-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">电子邮箱</label>
+                <input type="email" id="email" placeholder="请输入有效邮箱地址" autocomplete="email">
+                <span class="error-msg" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" id="password" placeholder="至少6位，含字母和数字" autocomplete="new-password">
+                <span class="error-msg" id="password-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">确认密码</label>
+                <input type="password" id="confirm-password" placeholder="请再次输入密码" autocomplete="new-password">
+                <span class="error-msg" id="confirm-error"></span>
+            </div>
+
+            <button type="submit" class="auth-btn">注 册</button>
+        </form>
+
+        <p class="auth-switch">已有账号？<a href="login.html">立即登录</a></p>
+        <p class="auth-switch" style="margin-top:8px;"><a href="index.html">← 返回首页</a></p>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.getElementById('register-form');
+        var username = document.getElementById('username');
+        var email = document.getElementById('email');
+        var password = document.getElementById('password');
+        var confirmPwd = document.getElementById('confirm-password');
+
+        var usernameError = document.getElementById('username-error');
+        var emailError = document.getElementById('email-error');
+        var passwordError = document.getElementById('password-error');
+        var confirmError = document.getElementById('confirm-error');
+
+        function showError(input, errorEl, msg) {
+            input.classList.add('error');
+            input.classList.remove('success');
+            errorEl.textContent = msg;
+            errorEl.classList.add('show');
+        }
+
+        function showSuccess(input) {
+            input.classList.remove('error');
+            input.classList.add('success');
+        }
+
+        function hideError(input, errorEl) {
+            input.classList.remove('error', 'success');
+            errorEl.classList.remove('show');
+        }
+
+        // 用户名校验规则
+        var usernamePattern = /^[a-zA-Z0-9_一-龥]{4,16}$/;
+
+        username.addEventListener('input', function() {
+            var val = username.value.trim();
+            if (val === '') {
+                showError(username, usernameError, '用户名不能为空');
+            } else if (!usernamePattern.test(val)) {
+                showError(username, usernameError, '用户名为4-16位字母、数字、下划线或中文');
+            } else {
+                showSuccess(username);
+                usernameError.classList.remove('show');
+            }
+        });
+
+        username.addEventListener('blur', function() {
+            var val = username.value.trim();
+            if (val === '') {
+                showError(username, usernameError, '用户名不能为空');
+            } else if (!usernamePattern.test(val)) {
+                showError(username, usernameError, '用户名为4-16位字母、数字、下划线或中文');
+            }
+        });
+
+        // 邮箱校验
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        email.addEventListener('input', function() {
+            var val = email.value.trim();
+            if (val === '') {
+                showError(email, emailError, '邮箱不能为空');
+            } else if (!emailPattern.test(val)) {
+                showError(email, emailError, '请输入正确的邮箱格式');
+            } else {
+                showSuccess(email);
+                emailError.classList.remove('show');
+            }
+        });
+
+        email.addEventListener('blur', function() {
+            var val = email.value.trim();
+            if (val === '') {
+                showError(email, emailError, '邮箱不能为空');
+            } else if (!emailPattern.test(val)) {
+                showError(email, emailError, '请输入正确的邮箱格式');
+            }
+        });
+
+        // 密码校验
+        var passwordPattern = /^(?=.*[a-zA-Z])(?=.*\d).{6,}$/;
+
+        password.addEventListener('input', function() {
+            var val = password.value;
+            if (val === '') {
+                showError(password, passwordError, '密码不能为空');
+            } else if (!passwordPattern.test(val)) {
+                showError(password, passwordError, '密码至少6位，且必须包含字母和数字');
+            } else {
+                showSuccess(password);
+                passwordError.classList.remove('show');
+            }
+            // 密码变化时同步校验确认密码
+            if (confirmPwd.value !== '') {
+                if (confirmPwd.value !== val) {
+                    showError(confirmPwd, confirmError, '两次输入的密码不一致');
+                } else if (passwordPattern.test(val)) {
+                    showSuccess(confirmPwd);
+                    confirmError.classList.remove('show');
+                }
+            }
+        });
+
+        password.addEventListener('blur', function() {
+            var val = password.value;
+            if (val === '') {
+                showError(password, passwordError, '密码不能为空');
+            } else if (!passwordPattern.test(val)) {
+                showError(password, passwordError, '密码至少6位，且必须包含字母和数字');
+            }
+        });
+
+        // 确认密码校验
+        confirmPwd.addEventListener('input', function() {
+            var val = confirmPwd.value;
+            if (val === '') {
+                showError(confirmPwd, confirmError, '请再次输入密码');
+            } else if (val !== password.value) {
+                showError(confirmPwd, confirmError, '两次输入的密码不一致');
+            } else {
+                showSuccess(confirmPwd);
+                confirmError.classList.remove('show');
+            }
+        });
+
+        confirmPwd.addEventListener('blur', function() {
+            var val = confirmPwd.value;
+            if (val === '') {
+                showError(confirmPwd, confirmError, '请再次输入密码');
+            } else if (val !== password.value) {
+                showError(confirmPwd, confirmError, '两次输入的密码不一致');
+            }
+        });
+
+        // 表单提交
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var valid = true;
+
+            var u = username.value.trim();
+            var em = email.value.trim();
+            var pw = password.value;
+            var cpw = confirmPwd.value;
+
+            if (u === '' || !usernamePattern.test(u)) {
+                showError(username, usernameError, u === '' ? '用户名不能为空' : '用户名为4-16位字母、数字、下划线或中文');
+                valid = false;
+            }
+            if (em === '' || !emailPattern.test(em)) {
+                showError(email, emailError, em === '' ? '邮箱不能为空' : '请输入正确的邮箱格式');
+                valid = false;
+            }
+            if (pw === '' || !passwordPattern.test(pw)) {
+                showError(password, passwordError, pw === '' ? '密码不能为空' : '密码至少6位，且必须包含字母和数字');
+                valid = false;
+            }
+            if (cpw === '' || cpw !== pw) {
+                showError(confirmPwd, confirmError, cpw === '' ? '请再次输入密码' : '两次输入的密码不一致');
+                valid = false;
+            }
+
+            if (valid) {
+                alert('注册成功！欢迎加入山野秘境，' + u + '。\n（此为演示页面，未连接后端）');
+                window.location.href = 'login.html';
+            }
+        });
+    });
+    </script>
+</body>
+</html>

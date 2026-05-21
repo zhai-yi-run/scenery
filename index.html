@@ -10,15 +10,38 @@
 
     <nav id="navbar">
         <div class="logo">山野秘境</div>
-        <ul class="nav-links">
+
+        <ul class="nav-center">
             <li><a href="index.html" class="active">首页</a></li>
-            <li><a href="destinations.html">精选路线</a></li>
+            <li class="dropdown">
+                <a href="destinations.html">精选路线 <span class="arrow">▾</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="regions/sichuan.html">四川</a></li>
+                    <li><a href="regions/tibet.html">西藏</a></li>
+                    <li><a href="regions/yunnan.html">云南</a></li>
+                    <li><a href="regions/xinjiang.html">新疆</a></li>
+                </ul>
+            </li>
             <li><a href="guides.html">游记攻略</a></li>
             <li><a href="about.html">关于我们</a></li>
         </ul>
+
+        <div class="nav-right">
+            <div class="nav-clock" id="nav-clock"></div>
+            <span class="nav-divider">|</span>
+            <div class="auth-links">
+                <a href="login.html">登录</a>
+                <a href="register.html">注册</a>
+            </div>
+        </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero" id="hero">
+        <div class="hero-bg active" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="hero-bg" style="background-image: url('imgs/jiuzhaigou.png');"></div>
+        <div class="hero-bg" style="background-image: url('imgs/zhumulangmafeng.png');"></div>
+        <div class="hero-bg" style="background-image: url('imgs/lasa.png');"></div>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>探索山野秘境，发现纯粹自我</h1>
             <p>背着背包的路上，听过许多故事，见过无数风景。<br>真实的自然，远比照片上的滤镜更动人心魄。</p>
@@ -29,7 +52,7 @@
     <section id="destinations" class="container">
         <h2 class="section-title">当季推荐目的地</h2>
         <div class="card-grid">
-            
+
             <div class="card">
                 <img src="imgs/lasa.png" alt="西藏布达拉宫">
                 <div class="card-content">
@@ -51,7 +74,7 @@
                         <span class="tag">AAAAA级</span>
                         <span class="tag">自然遗产</span>
                     </div>
-                    <p class="desc">“九寨归来不看水”。翠海、叠瀑、彩林、雪峰、藏情、蓝冰，被誉为“童话世界”。</p>
+                    <p class="desc">"九寨归来不看水"。翠海、叠瀑、彩林、雪峰、藏情、蓝冰，被誉为"童话世界"。</p>
                     <a href="details/jiuzhaigou.html" class="read-more">查看详情 ></a>
                 </div>
             </div>
@@ -77,37 +100,63 @@
     </footer>
 
     <script>
-      // 1. 监听滚动事件：改变导航栏样式
-// 当页面向下滚动超过50像素时，给nav标签添加'scrolled'类，使其背景变暗
-window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
+    // ========== 0. 首屏背景轮播 ==========
+    (function() {
+        var bgs = document.querySelectorAll('.hero-bg');
+        var total = bgs.length;
+        var current = 0;
+        if (total === 0) return;
+
+        function switchBg() {
+            bgs[current].classList.remove('active');
+            current = (current + 1) % total;
+            bgs[current].classList.add('active');
+        }
+
+        setInterval(switchBg, 5000);
+    })();
+
+    // ========== 1. 系统时钟 ==========
+    function updateClock() {
+        var now = new Date();
+        var y = now.getFullYear();
+        var mo = now.getMonth() + 1;
+        var d = now.getDate();
+        var h = now.getHours();
+        var mi = now.getMinutes();
+        if (mo < 10) mo = '0' + mo;
+        if (d < 10) d = '0' + d;
+        if (h < 10) h = '0' + h;
+        if (mi < 10) mi = '0' + mi;
+        document.getElementById('nav-clock').textContent =
+            y + '/' + mo + '/' + d + ' ' + h + ':' + mi;
     }
-});
+    updateClock();
+    setInterval(updateClock, 30000);
 
-// 2. 监听点击事件：平滑滚动到特定区域
-// 点击头部"现在开始探索"按钮，平滑滚动到卡片展示区
-document.addEventListener('DOMContentLoaded', function() {
-    const exploreBtn = document.getElementById('explore-btn');
-    const destinationsSection = document.getElementById('destinations');
+    // ========== 2. 导航栏滚动效果 ==========
+    window.addEventListener('scroll', function() {
+        var navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
 
-    if (exploreBtn && destinationsSection) {
-        exploreBtn.addEventListener('click', function() {
-            // 获取目标区域距离顶部的高度
-            const targetPosition = destinationsSection.offsetTop - 70; // 减去导航栏的高度
-            
-            // 执行平滑滚动
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
+    // ========== 3. 探索按钮平滑滚动 ==========
+    document.addEventListener('DOMContentLoaded', function() {
+        var exploreBtn = document.getElementById('explore-btn');
+        var destinations = document.getElementById('destinations');
+        if (exploreBtn && destinations) {
+            exploreBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: destinations.offsetTop - 70,
+                    behavior: 'smooth'
+                });
             });
-        });
-    }
-
-});
+        }
+    });
     </script>
 </body>
 </html>
