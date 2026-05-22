@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四姑娘山 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="../index.html" class="nav-logo">
+            <img src="../imgs/logo-icon.png" alt="山野秘境 Logo" class="logo-icon">
+            <span class="logo-text">山野秘境</span>
+        </a>
+
+        <ul class="nav-center">
+            <li><a href="../index.html">首页</a></li>
+            <li class="dropdown">
+                <a href="../destinations.html" class="active">精选路线<span class="arrow">&#9662;</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../regions/sichuan.html">四川</a></li>
+                    <li><a href="../regions/tibet.html">西藏</a></li>
+                    <li><a href="../regions/yunnan.html">云南</a></li>
+                    <li><a href="../regions/xinjiang.html">新疆</a></li>
+                </ul>
+            </li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="nav-clock" id="nav-clock"></div>
+            <span class="nav-divider">|</span>
+            <div class="auth-links">
+                <a href="../login.html">登录</a>
+                <a href="../register.html">注册</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>四姑娘山</h1>
+            <p>蜀山之后，东方阿尔卑斯的徒步天堂。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/sichuan.html">四川</a><span>></span><a href="../categories/sichuan-mountain.html">雪山秘境</a><span>></span>四姑娘山
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>四姑娘山位于四川省阿坝藏族羌族自治州小金县境内，由四座连绵的山峰组成，从北到南依次为大姑娘（5025米）、二姑娘（5276米）、三姑娘（5355米）和幺妹峰（6250米）。幺妹峰被誉为"蜀山之后"，山体陡峭、终年积雪，是技术型登山者的挑战目标。四姑娘山风景区主要由"三沟一山"组成：双桥沟、长坪沟、海子沟和四姑娘山，被誉为"东方阿尔卑斯"。</p>
+
+        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="四姑娘山">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>四川省阿坝州小金县</li>
+            <li><strong>海拔</strong>幺妹峰6250米（景区沟口约3200米）</li>
+            <li><strong>最佳季节</strong>6月—10月（夏季野花、秋季彩林）</li>
+            <li><strong>建议时长</strong>2—3天</li>
+            <li><strong>门票</strong>双桥沟80元+观光车70元；长坪沟70元（待核实）</li>
+            <li><strong>级别</strong>国家级自然保护区 / 世界自然遗产（大熊猫栖息地）</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>双桥沟（适合轻松游览）：乘观光车直达沟底红杉林，然后自上而下依次游览布达拉峰、四姑娜措、人参果坪等景点，全程半天。长坪沟（适合徒步）：从喇嘛寺出发，沿栈道徒步至枯树滩、木骡子，可远眺幺妹峰北壁，往返约6—8小时。海子沟（适合户外爱好者）：以高山海子和草甸为主，是露营和穿越的理想之地。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 双桥沟开发最完善，适合普通游客；长坪沟和海子沟更适合徒步爱好者。<br>2. 海拔较高，注意高原反应，不要剧烈运动。<br>3. 山区天气多变，雨具和防晒都需要准备。<br>4. 任何登山活动（包括大峰、二峰）均需在景区管理处登记并聘请向导。</p>
+
+        <h2>周边推荐</h2>
+        <p>丹巴藏寨（中国最美乡村，车程约2小时）、卧龙熊猫基地（车程约1.5小时）、夹金山（红军长征翻越的雪山，车程约1.5小时）。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+    <script>
+    (function() {
+        function updateClock() {
+            var now = new Date();
+            var y = now.getFullYear();
+            var mo = now.getMonth() + 1;
+            var d = now.getDate();
+            var h = now.getHours();
+            var mi = now.getMinutes();
+            if (mo < 10) mo = '0' + mo;
+            if (d < 10) d = '0' + d;
+            if (h < 10) h = '0' + h;
+            if (mi < 10) mi = '0' + mi;
+            var clock = document.getElementById('nav-clock');
+            if (clock) {
+                clock.textContent = y + '/' + mo + '/' + d + ' ' + h + ':' + mi;
+            }
+        }
+
+        updateClock();
+        setInterval(updateClock, 30000);
+    })();
+    </script>
+</body>
+</html>

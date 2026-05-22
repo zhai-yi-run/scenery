@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梅里雪山 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="../index.html" class="nav-logo">
+            <img src="../imgs/logo-icon.png" alt="山野秘境 Logo" class="logo-icon">
+            <span class="logo-text">山野秘境</span>
+        </a>
+        <ul class="nav-center">
+            <li><a href="../index.html">首页</a></li>
+            <li class="dropdown">
+                <a href="../destinations.html" class="active">精选路线<span class="arrow">&#9662;</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../regions/sichuan.html">四川</a></li>
+                    <li><a href="../regions/tibet.html">西藏</a></li>
+                    <li><a href="../regions/yunnan.html">云南</a></li>
+                    <li><a href="../regions/xinjiang.html">新疆</a></li>
+                </ul>
+            </li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+        <div class="nav-right">
+            <div class="nav-clock" id="nav-clock"></div>
+            <span class="nav-divider">|</span>
+            <div class="auth-links">
+                <a href="../login.html">登录</a>
+                <a href="../register.html">注册</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>梅里雪山</h1>
+            <p>藏区八大神山之首，日照金山的终极震撼。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/yunnan.html">云南</a><span>></span><a href="../categories/yunnan-nature.html">自然奇观</a><span>></span>梅里雪山
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>梅里雪山位于云南省迪庆藏族自治州德钦县境内，是横断山脉中最为壮观的一段。主峰卡瓦格博海拔6740米，是云南省最高峰，也是藏传佛教八大神山之首。每年无数藏民前来转山朝拜，而"日照金山"——清晨第一缕阳光将雪峰染成金色的奇观，是每个旅行者一生必看的画面。卡瓦格博至今仍是一座处女峰，1991年中日联合登山队17名队员遇难后，国家已禁止攀登此峰。</p>
+
+        <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="梅里雪山日照金山">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>云南省迪庆州德钦县</li>
+            <li><strong>海拔</strong>卡瓦格博6740米（观景台约3500米）</li>
+            <li><strong>最佳季节</strong>10月—次年5月（天气干燥，雪山可见度高）</li>
+            <li><strong>建议时长</strong>2—3天</li>
+            <li><strong>门票</strong>飞来寺观景台约60元（待核实）</li>
+            <li><strong>级别</strong>国家级风景名胜区</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>D1从香格里拉出发，经奔子栏、金沙江大拐弯到达飞来寺（约4小时车程）。傍晚在飞来寺观景台守候日落。D2清晨6点起床等待日照金山——日出时分，阳光从卡瓦格博峰尖开始，逐一染红整个梅里十三峰，持续约20分钟。之后可前往明永冰川或雨崩村徒步。D3返回香格里拉，沿途游览白马雪山垭口。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 日照金山最佳观赏期为10月下旬至次年3月，夏季雨季概率低且雾多难见真容。<br>2. 飞来寺海拔约3400米，注意高原反应，不要剧烈运动。<br>3. 清晨气温极低（可能-10℃以下），务必穿最厚的保暖衣物。<br>4. 雨崩村徒步需2—3天，是经典的入门级高海拔徒步路线。</p>
+
+        <h2>周边推荐</h2>
+        <p>雨崩村（徒步天堂，需从西当村步行或乘越野车进入）、明永冰川（世界少见的低纬度冰川）、盐井古盐田（西藏芒康，车程约2小时）。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+        if (window.scrollY > 400) backBtn.classList.add('show'); else backBtn.classList.remove('show');
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) backBtn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    });
+    </script>
+    <script>
+    (function() {
+        function updateClock() {
+            var now = new Date();
+            var y = now.getFullYear(), mo = now.getMonth() + 1, d = now.getDate(), h = now.getHours(), mi = now.getMinutes();
+            if (mo < 10) mo = '0' + mo; if (d < 10) d = '0' + d; if (h < 10) h = '0' + h; if (mi < 10) mi = '0' + mi;
+            var clock = document.getElementById('nav-clock');
+            if (clock) clock.textContent = y + '/' + mo + '/' + d + ' ' + h + ':' + mi;
+        }
+        updateClock(); setInterval(updateClock, 30000);
+    })();
+    </script>
+</body>
+</html>

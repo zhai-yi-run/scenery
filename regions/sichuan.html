@@ -7,27 +7,38 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-
     <nav id="navbar">
-        <div class="logo">山野秘境</div>
-        <ul class="nav-links">
-            <li><a href="../index.html">首页</a></li>
+        <a href="../index.html" class="nav-logo">
+            <img src="../imgs/logo-icon.png" alt="&#23665;&#37326;&#31192;&#22659; Logo" class="logo-icon">
+            <span class="logo-text">&#23665;&#37326;&#31192;&#22659;</span>
+        </a>
+
+        <ul class="nav-center">
+            <li><a href="../index.html">&#39318;&#39029;</a></li>
             <li class="dropdown">
-                <a href="../destinations.html" class="active">精选路线 <span class="arrow">▾</span></a>
+                <a href="../destinations.html" class="active">&#31934;&#36873;&#36335;&#32447;<span class="arrow">&#9662;</span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="../regions/sichuan.html">四川</a></li>
-                    <li><a href="../regions/tibet.html">西藏</a></li>
-                    <li><a href="../regions/yunnan.html">云南</a></li>
-                    <li><a href="../regions/xinjiang.html">新疆</a></li>
+                    <li><a href="../regions/sichuan.html">&#22235;&#24029;</a></li>
+                    <li><a href="../regions/tibet.html">&#35199;&#34255;</a></li>
+                    <li><a href="../regions/yunnan.html">&#20113;&#21335;</a></li>
+                    <li><a href="../regions/xinjiang.html">&#26032;&#30086;</a></li>
                 </ul>
             </li>
-            <li><a href="../guides.html">游记攻略</a></li>
-            <li><a href="../about.html">关于我们</a></li>
-            <li><a href="../login.html">登录</a></li>
+            <li><a href="../guides.html">&#28216;&#35760;&#25915;&#30053;</a></li>
+            <li><a href="../about.html">&#20851;&#20110;&#25105;&#20204;</a></li>
         </ul>
+
+        <div class="nav-right">
+            <div class="nav-clock" id="nav-clock"></div>
+            <span class="nav-divider">|</span>
+            <div class="auth-links">
+                <a href="../login.html">&#30331;&#24405;</a>
+                <a href="../register.html">&#27880;&#20876;</a>
+            </div>
+        </div>
     </nav>
 
-    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1574751093139-445695ab202e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../imgs/sichuanziran.png') center/cover;">
         <div class="page-hero-content">
             <h1>四川</h1>
             <p>天府之国，山水如画。从雪山到峡谷，从彩林到圣湖。</p>
@@ -43,7 +54,7 @@
         <div class="card-grid">
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1574751093139-445695ab202e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="四川自然遗产">
+                <img src="../imgs/sichuanfengjing.png" alt="四川自然遗产">
                 <div class="card-content">
                     <h3>四川自然遗产</h3>
                     <div class="tags">
@@ -57,7 +68,7 @@
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1544642899-2bcf1e9ebd47?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="川西雪山">
+                <img src="../imgs/chuanxi.png" alt="川西雪山">
                 <div class="card-content">
                     <h3>川西雪山秘境</h3>
                     <div class="tags">
@@ -74,7 +85,7 @@
     </section>
 
     <footer>
-        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+        <p>© 2026 山野秘境</p>
     </footer>
 
     <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
@@ -103,6 +114,29 @@
             });
         }
     });
+    </script>
+    <script>
+    (function() {
+        function updateClock() {
+            var now = new Date();
+            var y = now.getFullYear();
+            var mo = now.getMonth() + 1;
+            var d = now.getDate();
+            var h = now.getHours();
+            var mi = now.getMinutes();
+            if (mo < 10) mo = '0' + mo;
+            if (d < 10) d = '0' + d;
+            if (h < 10) h = '0' + h;
+            if (mi < 10) mi = '0' + mi;
+            var clock = document.getElementById('nav-clock');
+            if (clock) {
+                clock.textContent = y + '/' + mo + '/' + d + ' ' + h + ':' + mi;
+            }
+        }
+
+        updateClock();
+        setInterval(updateClock, 30000);
+    })();
     </script>
 </body>
 </html>

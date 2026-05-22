@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赛里木湖 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="../index.html" class="nav-logo">
+            <img src="../imgs/logo-icon.png" alt="山野秘境 Logo" class="logo-icon">
+            <span class="logo-text">山野秘境</span>
+        </a>
+
+        <ul class="nav-center">
+            <li><a href="../index.html">首页</a></li>
+            <li class="dropdown">
+                <a href="../destinations.html" class="active">精选路线<span class="arrow">&#9662;</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../regions/sichuan.html">四川</a></li>
+                    <li><a href="../regions/tibet.html">西藏</a></li>
+                    <li><a href="../regions/yunnan.html">云南</a></li>
+                    <li><a href="../regions/xinjiang.html">新疆</a></li>
+                </ul>
+            </li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="nav-clock" id="nav-clock"></div>
+            <span class="nav-divider">|</span>
+            <div class="auth-links">
+                <a href="../login.html">登录</a>
+                <a href="../register.html">注册</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1597424327448-5e0d7a74b17c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>赛里木湖</h1>
+            <p>大西洋的最后一滴眼泪，天山脚下的蓝宝石。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/xinjiang.html">新疆</a><span>></span><a href="../categories/xinjiang-scenery.html">草原湖泊</a><span>></span>赛里木湖
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>赛里木湖位于新疆博尔塔拉蒙古自治州博乐市境内，是新疆海拔最高、面积最大的高山冷水湖。湖面海拔2073米，湖水清澈湛蓝，透明度可达12米。赛里木湖被称为"大西洋的最后一滴眼泪"——大西洋暖湿气流长途跋涉到达此地后，被天山阻挡，化作最后一滴雨雪落入湖中。环湖公路全长约90公里，沿途风景如画，雪山、草原、花海与湛蓝湖水交相辉映。</p>
+
+        <img src="https://images.unsplash.com/photo-1597424327448-5e0d7a74b17c?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="赛里木湖">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>新疆博尔塔拉州博乐市</li>
+            <li><strong>海拔</strong>2073米（湖面）</li>
+            <li><strong>最佳季节</strong>6月—7月（湖畔花海），9月—10月（秋色金黄）</li>
+            <li><strong>建议时长</strong>1天（环湖游览）</li>
+            <li><strong>门票</strong>70元（待核实）</li>
+            <li><strong>级别</strong>国家级风景名胜区</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>建议自驾或包车环湖游览（全程约90公里），从东门进入后顺时针环湖。主要停靠点：月亮湾（湖东经典视角）、亲水滩（夏季野花遍地）、点将台（传说成吉思汗点将处）、西海草原（雪山下的牧场）、克勒涌珠（湖畔泉水）、松树头（登高俯瞰全景）。6月中旬至7月上旬湖畔金莲花、野郁金香盛开，是赛里木湖最美的时刻。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 环湖公路路况良好，全程柏油路，普通轿车即可通行。<br>2. 湖水即使在夏天也很冰凉，不建议游泳或涉水。<br>3. 湖边风大，即使是盛夏也带一件防风外套。<br>4. 赛里木湖位于连霍高速沿线，是从乌鲁木齐前往伊犁的必经之地，可安排在行程中途经游览。</p>
+
+        <h2>周边推荐</h2>
+        <p>果子沟大桥（车程约20分钟，震撼的峡谷大桥景观）、霍尔果斯口岸（中国-哈萨克斯坦边境，车程约1.5小时）、伊宁喀赞其民俗区（蓝色老城，车程约2小时）。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+    <script>
+    (function() {
+        function updateClock() {
+            var now = new Date();
+            var y = now.getFullYear();
+            var mo = now.getMonth() + 1;
+            var d = now.getDate();
+            var h = now.getHours();
+            var mi = now.getMinutes();
+            if (mo < 10) mo = '0' + mo;
+            if (d < 10) d = '0' + d;
+            if (h < 10) h = '0' + h;
+            if (mi < 10) mi = '0' + mi;
+            var clock = document.getElementById('nav-clock');
+            if (clock) {
+                clock.textContent = y + '/' + mo + '/' + d + ' ' + h + ':' + mi;
+            }
+        }
+
+        updateClock();
+        setInterval(updateClock, 30000);
+    })();
+    </script>
+</body>
+</html>

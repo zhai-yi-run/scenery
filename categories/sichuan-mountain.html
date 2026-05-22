@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -7,24 +7,35 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-
     <nav id="navbar">
-        <div class="logo">山野秘境</div>
-        <ul class="nav-links">
-            <li><a href="../index.html">首页</a></li>
+        <a href="../index.html" class="nav-logo">
+            <img src="../imgs/logo-icon.png" alt="&#23665;&#37326;&#31192;&#22659; Logo" class="logo-icon">
+            <span class="logo-text">&#23665;&#37326;&#31192;&#22659;</span>
+        </a>
+
+        <ul class="nav-center">
+            <li><a href="../index.html">&#39318;&#39029;</a></li>
             <li class="dropdown">
-                <a href="../destinations.html" class="active">精选路线 <span class="arrow">▾</span></a>
+                <a href="../destinations.html" class="active">&#31934;&#36873;&#36335;&#32447;<span class="arrow">&#9662;</span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="../regions/sichuan.html">四川</a></li>
-                    <li><a href="../regions/tibet.html">西藏</a></li>
-                    <li><a href="../regions/yunnan.html">云南</a></li>
-                    <li><a href="../regions/xinjiang.html">新疆</a></li>
+                    <li><a href="../regions/sichuan.html">&#22235;&#24029;</a></li>
+                    <li><a href="../regions/tibet.html">&#35199;&#34255;</a></li>
+                    <li><a href="../regions/yunnan.html">&#20113;&#21335;</a></li>
+                    <li><a href="../regions/xinjiang.html">&#26032;&#30086;</a></li>
                 </ul>
             </li>
-            <li><a href="../guides.html">游记攻略</a></li>
-            <li><a href="../about.html">关于我们</a></li>
-            <li><a href="../login.html">登录</a></li>
+            <li><a href="../guides.html">&#28216;&#35760;&#25915;&#30053;</a></li>
+            <li><a href="../about.html">&#20851;&#20110;&#25105;&#20204;</a></li>
         </ul>
+
+        <div class="nav-right">
+            <div class="nav-clock" id="nav-clock"></div>
+            <span class="nav-divider">|</span>
+            <div class="auth-links">
+                <a href="../login.html">&#30331;&#24405;</a>
+                <a href="../register.html">&#27880;&#20876;</a>
+            </div>
+        </div>
     </nav>
 
     <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1544642899-2bcf1e9ebd47?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
@@ -51,7 +62,7 @@
                         <span class="tag">海拔7556米</span>
                     </div>
                     <p class="desc">"蜀山之王"贡嘎，主峰海拔7556米，是全球相对高差最大的山峰之一。子梅垭口是最佳观赏点，日出金山震撼灵魂。</p>
-                    <a href="../details/daocheng.html" class="read-more">查看详情 ></a>
+                    <a href="../details/gongga.html" class="read-more">查看详情 ></a>
                 </div>
             </div>
 
@@ -64,7 +75,7 @@
                         <span class="tag">徒步天堂</span>
                     </div>
                     <p class="desc">"蜀山之后"四姑娘山，由四座连绵山峰组成。长坪沟、海子沟两条经典徒步路线，近距离感受雪山与草甸之美。</p>
-                    <a href="../details/daocheng.html" class="read-more">查看详情 ></a>
+                    <a href="../details/siguniang.html" class="read-more">查看详情 ></a>
                 </div>
             </div>
 
@@ -77,7 +88,7 @@
                         <span class="tag">360°观景</span>
                     </div>
                     <p class="desc">中国最大的360度观景平台，同时可观赏贡嘎、四姑娘山、峨眉山等蜀中名山。云海、日出、星空、佛光齐聚。</p>
-                    <a href="../details/daocheng.html" class="read-more">查看详情 ></a>
+                    <a href="../details/niubei.html" class="read-more">查看详情 ></a>
                 </div>
             </div>
 
@@ -85,7 +96,7 @@
     </section>
 
     <footer>
-        <p>© 2026 山野秘境 Web前端开发小组. 仅作期末项目演示使用.</p>
+        <p>© 2026 山野秘境</p>
     </footer>
 
     <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
@@ -114,6 +125,29 @@
             });
         }
     });
+    </script>
+    <script>
+    (function() {
+        function updateClock() {
+            var now = new Date();
+            var y = now.getFullYear();
+            var mo = now.getMonth() + 1;
+            var d = now.getDate();
+            var h = now.getHours();
+            var mi = now.getMinutes();
+            if (mo < 10) mo = '0' + mo;
+            if (d < 10) d = '0' + d;
+            if (h < 10) h = '0' + h;
+            if (mi < 10) mi = '0' + mi;
+            var clock = document.getElementById('nav-clock');
+            if (clock) {
+                clock.textContent = y + '/' + mo + '/' + d + ' ' + h + ':' + mi;
+            }
+        }
+
+        updateClock();
+        setInterval(updateClock, 30000);
+    })();
     </script>
 </body>
 </html>

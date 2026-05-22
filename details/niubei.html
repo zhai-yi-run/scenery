@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>牛背山 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="../index.html" class="nav-logo">
+            <img src="../imgs/logo-icon.png" alt="山野秘境 Logo" class="logo-icon">
+            <span class="logo-text">山野秘境</span>
+        </a>
+
+        <ul class="nav-center">
+            <li><a href="../index.html">首页</a></li>
+            <li class="dropdown">
+                <a href="../destinations.html" class="active">精选路线<span class="arrow">&#9662;</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../regions/sichuan.html">四川</a></li>
+                    <li><a href="../regions/tibet.html">西藏</a></li>
+                    <li><a href="../regions/yunnan.html">云南</a></li>
+                    <li><a href="../regions/xinjiang.html">新疆</a></li>
+                </ul>
+            </li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="nav-clock" id="nav-clock"></div>
+            <span class="nav-divider">|</span>
+            <div class="auth-links">
+                <a href="../login.html">登录</a>
+                <a href="../register.html">注册</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../imgs/niubeishan.png') center/cover;">
+        <div class="page-hero-content">
+            <h1>牛背山</h1>
+            <p>中国最大的360°观景平台，雪山云海的盛宴。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/sichuan.html">四川</a><span>></span><a href="../categories/sichuan-mountain.html">雪山秘境</a><span>></span>牛背山
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>牛背山位于四川省雅安市荥经县与甘孜州泸定县交界处，海拔3666米，因山顶一块形似牛背的巨石而得名。牛背山被誉为"中国最大的360度观景平台"，天气晴好时，可以同时观赏到贡嘎雪山、四姑娘山、峨眉山、瓦屋山、夹金山等蜀中名山。云海、日出、星空、佛光"四绝"齐聚，是户外爱好者和摄影师心目中的圣地。</p>
+
+        <img src="https://images.unsplash.com/photo-1486911278844-a81c5267e227?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="牛背山云海">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>四川省雅安市荥经县与甘孜州泸定县交界</li>
+            <li><strong>海拔</strong>3666米</li>
+            <li><strong>最佳季节</strong>3月—5月、10月—11月（天气稳定，云海概率高）</li>
+            <li><strong>建议时长</strong>2天（山顶住一晚）</li>
+            <li><strong>门票</strong>景区门票+观光车约200元（待核实）</li>
+            <li><strong>级别</strong>国家地质公园</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>D1从成都出发经雅安到牛背山景区游客中心（约3.5小时），换乘观光车上山（约1.5小时）。下午抵达山顶后，漫步观景台，等待日落。晚上住山顶帐篷酒店或星空营地，拍摄星空和银河。D2清晨5点起床等待日出——这是牛背山最震撼的时刻，阳光依次点亮贡嘎群峰。上午可在不同观景台拍照留念，午前下山返回成都。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 牛背山天气多变，"十去九雾"虽夸张但说明需选好天气窗口，建议出发前查看卫星云图。<br>2. 山顶早晚温差极大，即使夏季也需羽绒服，冬季需专业防寒装备。<br>3. 目前牛背山已开发为正规景区，已不能自驾上山顶，需乘景区观光车。<br>4. 山顶住宿有限，节假日务必提前一个月以上预订。</p>
+
+        <h2>周边推荐</h2>
+        <p>海螺沟冰川（车程约2小时）、泸定桥（红色旅游景点，车程约1小时）、四人同山（牛背山对面的观景替代选择）。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+    <script>
+    (function() {
+        function updateClock() {
+            var now = new Date();
+            var y = now.getFullYear();
+            var mo = now.getMonth() + 1;
+            var d = now.getDate();
+            var h = now.getHours();
+            var mi = now.getMinutes();
+            if (mo < 10) mo = '0' + mo;
+            if (d < 10) d = '0' + d;
+            if (h < 10) h = '0' + h;
+            if (mi < 10) mi = '0' + mi;
+            var clock = document.getElementById('nav-clock');
+            if (clock) {
+                clock.textContent = y + '/' + mo + '/' + d + ' ' + h + ':' + mi;
+            }
+        }
+
+        updateClock();
+        setInterval(updateClock, 30000);
+    })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云南自然奇观 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="../index.html" class="nav-logo">
+            <img src="../imgs/logo-icon.png" alt="山野秘境 Logo" class="logo-icon">
+            <span class="logo-text">山野秘境</span>
+        </a>
+
+        <ul class="nav-center">
+            <li><a href="../index.html">首页</a></li>
+            <li class="dropdown">
+                <a href="../destinations.html" class="active">精选路线<span class="arrow">&#9662;</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../regions/sichuan.html">四川</a></li>
+                    <li><a href="../regions/tibet.html">西藏</a></li>
+                    <li><a href="../regions/yunnan.html">云南</a></li>
+                    <li><a href="../regions/xinjiang.html">新疆</a></li>
+                </ul>
+            </li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="nav-clock" id="nav-clock"></div>
+            <span class="nav-divider">|</span>
+            <div class="auth-links">
+                <a href="../login.html">登录</a>
+                <a href="../register.html">注册</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>云南自然奇观</h1>
+            <p>雪山、湖泊、梯田——彩云之南的自然馈赠。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/yunnan.html">云南</a><span>></span>自然奇观
+    </div>
+
+    <section class="container">
+        <h2 class="section-title">自然奇观线路推荐</h2>
+        <div class="card-grid">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="梅里雪山">
+                <div class="card-content">
+                    <h3>梅里雪山</h3>
+                    <div class="tags">
+                        <span class="tag">日照金山</span>
+                        <span class="tag">藏区八大神山</span>
+                    </div>
+                    <p class="desc">主峰卡瓦格博海拔6740米，是藏传佛教八大神山之首。清晨日照金山是世间最震撼的景观之一，至今无人登顶。</p>
+                    <a href="../details/meili.html" class="read-more">查看详情 ></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1597424327448-5e0d7a74b17c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="泸沽湖">
+                <div class="card-content">
+                    <h3>泸沽湖</h3>
+                    <div class="tags">
+                        <span class="tag">高原明珠</span>
+                        <span class="tag">摩梭文化</span>
+                    </div>
+                    <p class="desc">横跨川滇两省的高原淡水湖，湖水清澈见底。湖畔摩梭人保留着世界上最后的母系氏族文化——走婚习俗神秘而独特。</p>
+                    <a href="../details/luguhu.html" class="read-more">查看详情 ></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1597074866923-dc0589150358?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="元阳梯田">
+                <div class="card-content">
+                    <h3>元阳梯田</h3>
+                    <div class="tags">
+                        <span class="tag">世界遗产</span>
+                        <span class="tag">哈尼族</span>
+                    </div>
+                    <p class="desc">哈尼族人千百年来在哀牢山雕刻的大地艺术。每年11月至次年4月灌水期，层层梯田如镜面倒映天光云影，日出日落时分光影变幻绝美。</p>
+                    <a href="../details/yuanyang.html" class="read-more">查看详情 ></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 山野秘境</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+    <script>
+    (function() {
+        function updateClock() {
+            var now = new Date();
+            var y = now.getFullYear();
+            var mo = now.getMonth() + 1;
+            var d = now.getDate();
+            var h = now.getHours();
+            var mi = now.getMinutes();
+            if (mo < 10) mo = '0' + mo;
+            if (d < 10) d = '0' + d;
+            if (h < 10) h = '0' + h;
+            if (mi < 10) mi = '0' + mi;
+            var clock = document.getElementById('nav-clock');
+            if (clock) {
+                clock.textContent = y + '/' + mo + '/' + d + ' ' + h + ':' + mi;
+            }
+        }
+
+        updateClock();
+        setInterval(updateClock, 30000);
+    })();
+    </script>
+</body>
+</html>

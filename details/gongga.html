@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贡嘎雪山 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="../index.html" class="nav-logo">
+            <img src="../imgs/logo-icon.png" alt="山野秘境 Logo" class="logo-icon">
+            <span class="logo-text">山野秘境</span>
+        </a>
+
+        <ul class="nav-center">
+            <li><a href="../index.html">首页</a></li>
+            <li class="dropdown">
+                <a href="../destinations.html" class="active">精选路线<span class="arrow">&#9662;</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../regions/sichuan.html">四川</a></li>
+                    <li><a href="../regions/tibet.html">西藏</a></li>
+                    <li><a href="../regions/yunnan.html">云南</a></li>
+                    <li><a href="../regions/xinjiang.html">新疆</a></li>
+                </ul>
+            </li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="nav-clock" id="nav-clock"></div>
+            <span class="nav-divider">|</span>
+            <div class="auth-links">
+                <a href="../login.html">登录</a>
+                <a href="../register.html">注册</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1544642899-2bcf1e9ebd47?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>贡嘎雪山</h1>
+            <p>蜀山之王，海拔7556米的极致震撼。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/sichuan.html">四川</a><span>></span><a href="../categories/sichuan-mountain.html">雪山秘境</a><span>></span>贡嘎雪山
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>贡嘎雪山位于四川省甘孜藏族自治州境内，主峰海拔7556米，是横断山脉的最高峰，也是四川省最高峰，被誉为"蜀山之王"。贡嘎是全球相对高差最大的山峰之一——从大渡河谷到主峰顶，水平距离仅29公里，高差却达6400米。子梅垭口、牛背山、冷嘎措等观景点可从不同角度仰望这座巍峨的雪山，日出金山更是令无数摄影师魂牵梦绕的画面。</p>
+
+        <img src="https://images.unsplash.com/photo-1544642899-2bcf1e9ebd47?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="贡嘎雪山">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>四川省甘孜州康定市、泸定县交界</li>
+            <li><strong>海拔</strong>7556米（主峰）</li>
+            <li><strong>最佳季节</strong>10月—次年4月（天气稳定，雪山可见度高）</li>
+            <li><strong>建议时长</strong>2—3天</li>
+            <li><strong>门票</strong>不同观景平台收费不同（待核实）</li>
+            <li><strong>级别</strong>国家级风景名胜区</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>经典三日路线：D1从成都出发经雅安、康定到新都桥（约6小时车程），沿途欣赏折多山风光。D2清晨前往子梅垭口（海拔4550米）等待贡嘎日出，下午可前往冷嘎措拍摄贡嘎倒影。D3返回新都桥，沿途游览塔公草原和雅拉雪山观景台。子梅垭口是最易到达的贡嘎观景点，越野车可直接开到垭口。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 子梅垭口海拔4500米以上，注意高原反应，备好氧气和药物。<br>2. 山区天气多变，即使晴天也需带防风外套和保暖衣物。<br>3. 部分路段为土路/碎石路，建议驾驶越野车或包车前往。<br>4. 日出前气温极低（可达-20℃），摄影爱好者务必做好防寒准备。</p>
+
+        <h2>周边推荐</h2>
+        <p>新都桥（摄影家天堂，车程约1小时）、塔公草原（雅拉雪山与塔公寺，车程约1.5小时）、海螺沟冰川（车程约3小时）。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+    <script>
+    (function() {
+        function updateClock() {
+            var now = new Date();
+            var y = now.getFullYear();
+            var mo = now.getMonth() + 1;
+            var d = now.getDate();
+            var h = now.getHours();
+            var mi = now.getMinutes();
+            if (mo < 10) mo = '0' + mo;
+            if (d < 10) d = '0' + d;
+            if (h < 10) h = '0' + h;
+            if (mi < 10) mi = '0' + mi;
+            var clock = document.getElementById('nav-clock');
+            if (clock) {
+                clock.textContent = y + '/' + mo + '/' + d + ' ' + h + ':' + mi;
+            }
+        }
+
+        updateClock();
+        setInterval(updateClock, 30000);
+    })();
+    </script>
+</body>
+</html>

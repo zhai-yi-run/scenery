@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>丽江古城 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="../index.html" class="nav-logo">
+            <img src="../imgs/logo-icon.png" alt="山野秘境 Logo" class="logo-icon">
+            <span class="logo-text">山野秘境</span>
+        </a>
+
+        <ul class="nav-center">
+            <li><a href="../index.html">首页</a></li>
+            <li class="dropdown">
+                <a href="../destinations.html" class="active">精选路线<span class="arrow">&#9662;</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../regions/sichuan.html">四川</a></li>
+                    <li><a href="../regions/tibet.html">西藏</a></li>
+                    <li><a href="../regions/yunnan.html">云南</a></li>
+                    <li><a href="../regions/xinjiang.html">新疆</a></li>
+                </ul>
+            </li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="nav-clock" id="nav-clock"></div>
+            <span class="nav-divider">|</span>
+            <div class="auth-links">
+                <a href="../login.html">登录</a>
+                <a href="../register.html">注册</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1540331547305-aee1f7be81d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>丽江古城</h1>
+            <p>世界文化遗产，水巷石桥间的纳西慢时光。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/yunnan.html">云南</a><span>></span><a href="../categories/yunnan-ancient.html">古镇风情</a><span>></span>丽江古城
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>丽江古城位于云南省丽江市古城区，始建于宋末元初，已有800多年历史。1997年被列入世界文化遗产名录。古城以四方街为中心，水巷交错、石桥相连，黑龙潭的泉水经玉河分三股穿城而过，形成了"家家流水、户户垂杨"的独特风貌。这里是纳西族世代生活的地方，东巴文化、纳西古乐、白沙壁画诉说着这个民族的千年故事。白天的古城安静古朴，夜晚的酒吧街则热闹非凡，是完全不同的两种丽江。</p>
+
+        <img src="https://images.unsplash.com/photo-1540331547305-aee1f7be81d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="丽江古城">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>云南省丽江市古城区</li>
+            <li><strong>海拔</strong>2416米</li>
+            <li><strong>最佳季节</strong>4月—10月（气候宜人，避开雨季7—8月更好）</li>
+            <li><strong>建议时长</strong>2—3天</li>
+            <li><strong>门票</strong>古城维护费50元（待核实）</li>
+            <li><strong>级别</strong>世界文化遗产 / 国家AAAAA级景区</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>D1：上午从大水车进入古城，沿七一街或五一街漫步至四方街，参观木府（纳西族土司府邸，被称为"紫禁城"）。下午登狮子山万古楼俯瞰古城全景。晚上在古城酒吧街感受丽江夜的魅力。D2：前往束河古镇（比大研古城更安静古朴），下午骑行至白沙古镇看白沙壁画。D3：玉龙雪山一日游（距古城约20公里），乘大索道登冰川公园，下午游览蓝月谷。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 古城内石板路不平，拖行李箱不便，建议住古城边缘或使用背包。<br>2. 丽江海拔2400多米，大部分人不会有高反，但紫外线强需防晒。<br>3. 淡旺季住宿价格差异极大，节假日价格可能翻3—5倍。<br>4. 古城内商业化程度较高，想找地道纳西美食建议去新城或忠义市场。</p>
+
+        <h2>周边推荐</h2>
+        <p>束河古镇（更安静的古镇，车程约15分钟）、玉龙雪山（北半球最南的雪山，车程约40分钟）、拉市海（高原湿地观鸟，车程约30分钟）、虎跳峡（世界最深峡谷之一，车程约1.5小时）。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+    <script>
+    (function() {
+        function updateClock() {
+            var now = new Date();
+            var y = now.getFullYear();
+            var mo = now.getMonth() + 1;
+            var d = now.getDate();
+            var h = now.getHours();
+            var mi = now.getMinutes();
+            if (mo < 10) mo = '0' + mo;
+            if (d < 10) d = '0' + d;
+            if (h < 10) h = '0' + h;
+            if (mi < 10) mi = '0' + mi;
+            var clock = document.getElementById('nav-clock');
+            if (clock) {
+                clock.textContent = y + '/' + mo + '/' + d + ' ' + h + ':' + mi;
+            }
+        }
+
+        updateClock();
+        setInterval(updateClock, 30000);
+    })();
+    </script>
+</body>
+</html>

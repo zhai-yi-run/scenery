@@ -4,7 +4,17 @@
       "Bash(Get-ChildItem -Recurse -Name -File)",
       "Bash(Select-Object -First 100)",
       "PowerShell([System.IO.File]::ReadAllBytes\\(\"C:\\\\Users\\\\24049\\\\.claude\\\\settings.json\"\\)[0..2])",
-      "Bash(Get-ChildItem *)"
+      "Bash(Get-ChildItem *)",
+      "Bash(git switch *)",
+      "Bash(pandoc *)",
+      "Bash(python *)",
+      "Bash(git checkout *)",
+      "Bash(git merge *)",
+      "Bash(git push *)",
+      "Bash(curl -s http://localhost:8080/details/lhasa.html)",
+      "Bash(claude *)",
+      "Bash(uv run *)",
+      "PowerShell(python -c \"import zipfile; import xml.etree.ElementTree as ET; z = zipfile.ZipFile\\(r'E:\\\\zhuo\\\\ʵ�����ۺ�ʵ��-ָ����.docx', 'r'\\); f = z.open\\('word/document.xml'\\); tree = ET.parse\\(f\\); root = tree.getroot\\(\\); [print\\(''.join\\([t.text for t in p.iter\\('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}t'\\) if t.text]\\)\\) for p in root.iter\\('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}p'\\)]\")"
     ]
   }
 }

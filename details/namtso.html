@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纳木错 · 天湖 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <a href="../index.html" class="nav-logo">
+            <img src="../imgs/logo-icon.png" alt="山野秘境 Logo" class="logo-icon">
+            <span class="logo-text">山野秘境</span>
+        </a>
+
+        <ul class="nav-center">
+            <li><a href="../index.html">首页</a></li>
+            <li class="dropdown">
+                <a href="../destinations.html" class="active">精选路线<span class="arrow">▾</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../regions/sichuan.html">四川</a></li>
+                    <li><a href="../regions/tibet.html">西藏</a></li>
+                    <li><a href="../regions/yunnan.html">云南</a></li>
+                    <li><a href="../regions/xinjiang.html">新疆</a></li>
+                </ul>
+            </li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="nav-clock" id="nav-clock"></div>
+            <span class="nav-divider">|</span>
+            <div class="auth-links">
+                <a href="../login.html">登录</a>
+                <a href="../register.html">注册</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../imgs/tianhu.png') center/cover;">
+        <div class="page-hero-content">
+            <h1>纳木错 · 天湖</h1>
+            <p>西藏三大圣湖之首，高原上的蓝色眼眸。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/tibet.html">西藏</a><span>></span><a href="../categories/tibet-nature.html">自然风光</a><span>></span>纳木错·天湖
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>纳木错位于西藏自治区当雄县和那曲市班戈县交界处，湖面海拔4718米，东西长70多公里，南北宽30多公里，总面积1920平方公里，是西藏最大的湖泊，也是中国第三大咸水湖。纳木错在藏语中意为"天湖"，与玛旁雍错、羊卓雍错并称西藏三大圣湖。</p>
+
+        <img src="../imgs/tianhufengjing.png" alt="纳木错全景">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>西藏自治区当雄县 / 班戈县交界</li>
+            <li><strong>海拔</strong>湖面4718米</li>
+            <li><strong>面积</strong>约1920平方公里</li>
+            <li><strong>最佳季节</strong>6月—9月（冬季湖面封冻无法进入）</li>
+            <li><strong>建议时长</strong>1—2天</li>
+            <li><strong>门票</strong>旺季120元 / 淡季60元（待核实）</li>
+            <li><strong>级别</strong>国家级风景名胜区 / 西藏三大圣湖之首</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>从拉萨出发，沿青藏公路（G109）北上约190公里，经当雄县转往纳木错方向，全程约4—5小时车程。途中翻越海拔5190米的那根拉山口，可远眺纳木错全貌。到达扎西半岛后，可沿湖边徒步，参观合掌石、善恶洞等景点。建议在扎西半岛住一晚，纳木错的日出和星空是绝不可错过的体验。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 纳木错海拔极高，务必提前适应高原环境再前往。<br>2. 湖边风大温差大，即使夏季也需携带羽绒服。<br>3. 住宿条件简陋（简易板房或帐篷），对住宿有要求的需提前规划。<br>4. 湖面风大浪急，请勿下水嬉戏，尊重当地信仰不向湖中投物。<br>5. 冬季（11月至次年4月）道路封冻，景区基本关闭。</p>
+
+        <h2>周边推荐</h2>
+        <p>念青唐古拉雪山（远眺，从纳木错可见主峰）、羊八井地热温泉（返程途中，距当雄约80公里）。如果时间充裕，可继续西行前往班戈县，探访色林错等藏北高原湖泊群。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+
+    (function() {
+        function updateClock() {
+            var now = new Date();
+            var y = now.getFullYear();
+            var mo = now.getMonth() + 1;
+            var d = now.getDate();
+            var h = now.getHours();
+            var mi = now.getMinutes();
+            if (mo < 10) mo = '0' + mo;
+            if (d < 10) d = '0' + d;
+            if (h < 10) h = '0' + h;
+            if (mi < 10) mi = '0' + mi;
+            var clock = document.getElementById('nav-clock');
+            if (clock) {
+                clock.textContent = y + '/' + mo + '/' + d + ' ' + h + ':' + mi;
+            }
+        }
+        updateClock();
+        setInterval(updateClock, 30000);
+    })();
+    </script>
+</body>
+</html>

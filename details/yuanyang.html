@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元阳梯田 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="../index.html" class="nav-logo">
+            <img src="../imgs/logo-icon.png" alt="山野秘境 Logo" class="logo-icon">
+            <span class="logo-text">山野秘境</span>
+        </a>
+        <ul class="nav-center">
+            <li><a href="../index.html">首页</a></li>
+            <li class="dropdown">
+                <a href="../destinations.html" class="active">精选路线<span class="arrow">&#9662;</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../regions/sichuan.html">四川</a></li>
+                    <li><a href="../regions/tibet.html">西藏</a></li>
+                    <li><a href="../regions/yunnan.html">云南</a></li>
+                    <li><a href="../regions/xinjiang.html">新疆</a></li>
+                </ul>
+            </li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+        <div class="nav-right">
+            <div class="nav-clock" id="nav-clock"></div>
+            <span class="nav-divider">|</span>
+            <div class="auth-links">
+                <a href="../login.html">登录</a>
+                <a href="../register.html">注册</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1597074866923-dc0589150358?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>元阳梯田</h1>
+            <p>哈尼族人千年雕刻的大地艺术。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/yunnan.html">云南</a><span>></span><a href="../categories/yunnan-nature.html">自然奇观</a><span>></span>元阳梯田
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>元阳梯田位于云南省红河哈尼族彝族自治州元阳县，是哈尼族人1300多年来在哀牢山南段雕刻的杰作。2013年被列入世界文化遗产名录（红河哈尼梯田文化景观）。梯田从海拔800米延伸至2000多米，最多达3700级，规模宏大、气势磅礴。每年11月至次年4月灌水期，层层梯田如千万面明镜倒映天光云影，日出日落时分光影变幻最为壮观，是摄影爱好者的天堂。</p>
+
+        <img src="https://images.unsplash.com/photo-1597074866923-dc0589150358?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="元阳梯田">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>云南省红河州元阳县</li>
+            <li><strong>海拔</strong>梯田分布800—2000米</li>
+            <li><strong>最佳季节</strong>11月—次年4月（灌水期，光影最佳）</li>
+            <li><strong>建议时长</strong>2—3天</li>
+            <li><strong>门票</strong>100元（含多依树、坝达、老虎嘴等观景台，待核实）</li>
+            <li><strong>级别</strong>世界文化遗产</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>D1从昆明出发（车程约5小时）或从建水出发（车程约2小时），下午抵达新街镇，傍晚前往坝达景区看日落（坝达以开阔壮观著称）。D2清晨5点前往多依树景区等日出——这是元阳最经典的拍摄点，晨雾、云海和梯田镜面光影交织。上午游览爱春蓝梯田（上午顺光时梯田呈现蓝色），下午前往老虎嘴景区（以日落光影和梯田线条闻名）。D3上午探访哈尼族村寨（箐口村），了解蘑菇房和哈尼文化，午后返程。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 每年12月至次年3月是最佳拍摄季，也是游客高峰期，住宿需提前预订。<br>2. 多依树日出需凌晨5点前到达占机位，观景台人满为患，可考虑在附近民宿屋顶拍摄。<br>3. 元阳早晚温差大，清晨气温可能接近0℃，需穿厚外套。<br>4. 景区各观景台之间距离较远（10—20公里），建议包车游览（约200—300元/天）。</p>
+
+        <h2>周边推荐</h2>
+        <p>建水古城（千年古城、双龙桥，车程约2小时）、普者黑（喀斯特山水田园，车程约3.5小时）、蒙自（过桥米线发源地，车程约1.5小时）。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+        if (window.scrollY > 400) backBtn.classList.add('show'); else backBtn.classList.remove('show');
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) backBtn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    });
+    </script>
+    <script>
+    (function() {
+        function updateClock() {
+            var now = new Date();
+            var y = now.getFullYear(), mo = now.getMonth() + 1, d = now.getDate(), h = now.getHours(), mi = now.getMinutes();
+            if (mo < 10) mo = '0' + mo; if (d < 10) d = '0' + d; if (h < 10) h = '0' + h; if (mi < 10) mi = '0' + mi;
+            var clock = document.getElementById('nav-clock');
+            if (clock) clock.textContent = y + '/' + mo + '/' + d + ' ' + h + ':' + mi;
+        }
+        updateClock(); setInterval(updateClock, 30000);
+    })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大昭寺 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <a href="../index.html" class="nav-logo">
+            <img src="../imgs/logo-icon.png" alt="山野秘境 Logo" class="logo-icon">
+            <span class="logo-text">山野秘境</span>
+        </a>
+
+        <ul class="nav-center">
+            <li><a href="../index.html">首页</a></li>
+            <li class="dropdown">
+                <a href="../destinations.html" class="active">精选路线<span class="arrow">▾</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../regions/sichuan.html">四川</a></li>
+                    <li><a href="../regions/tibet.html">西藏</a></li>
+                    <li><a href="../regions/yunnan.html">云南</a></li>
+                    <li><a href="../regions/xinjiang.html">新疆</a></li>
+                </ul>
+            </li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="nav-clock" id="nav-clock"></div>
+            <span class="nav-divider">|</span>
+            <div class="auth-links">
+                <a href="../login.html">登录</a>
+                <a href="../register.html">注册</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../imgs/fu.png') center/cover;">
+        <div class="page-hero-content">
+            <h1>拉萨 · 大昭寺</h1>
+            <p>先有大昭寺，后有拉萨城。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/tibet.html">西藏</a><span>></span><a href="../categories/tibet-culture.html">人文之旅</a><span>></span>大昭寺
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>大昭寺位于西藏自治区拉萨市城关区八廓街，始建于公元647年（吐蕃王朝松赞干布时期），距今已有1300多年历史。大昭寺是西藏现存最辉煌的吐蕃时期建筑，也是藏传佛教最神圣的寺庙。寺内供奉着文成公主从长安带来的释迦牟尼12岁等身金像，在藏传佛教中拥有至高无上的地位。藏族人民有"先有大昭寺，后有拉萨城"的说法，大昭寺在拉萨乃至整个藏区的地位不亚于布达拉宫。</p>
+
+        <img src="../imgs/fu.png" alt="大昭寺">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>西藏自治区拉萨市城关区八廓街</li>
+            <li><strong>海拔</strong>约3650米</li>
+            <li><strong>始建</strong>公元647年（唐贞观二十一年）</li>
+            <li><strong>最佳季节</strong>全年皆宜（冬季游客少，朝圣氛围更浓）</li>
+            <li><strong>建议时长</strong>半天</li>
+            <li><strong>门票</strong>85元（待核实）</li>
+            <li><strong>级别</strong>世界文化遗产 / 全国重点文物保护单位</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>建议上午参观大昭寺主殿（约1.5—2小时），重点瞻仰释迦牟尼12岁等身金像、松赞干布与文成公主塑像。参观完后，可沿八廓街顺时针转经一圈，感受藏民的朝圣氛围。午后可在八廓街周边的甜茶馆小坐，体验拉萨慢生活。如果时间充裕，晚上可以再次来到大昭寺广场，看磕长头的信徒和夜色中金色的寺庙金顶。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 进入寺庙需脱帽、摘墨镜，不可穿短裤短裙。<br>2. 殿内禁止拍照，请尊重宗教场所规定。<br>3. 请勿用手指指向佛像，以掌心向上的手势示意。<br>4. 建议跟随朝圣者方向顺时针参观。<br>5. 上午朝圣者较多，可能需要排队进入主殿。</p>
+
+        <h2>周边推荐</h2>
+        <p>八廓街（大昭寺外围，步行0分钟）、布达拉宫（步行约15分钟）、小昭寺（步行约10分钟）、色拉寺（打车约20分钟）。大昭寺与布达拉宫可安排在同一天游览，上午布达拉宫下午大昭寺是最经典的拉萨一日游线路。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) {
+            backBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    });
+
+    (function() {
+        function updateClock() {
+            var now = new Date();
+            var y = now.getFullYear();
+            var mo = now.getMonth() + 1;
+            var d = now.getDate();
+            var h = now.getHours();
+            var mi = now.getMinutes();
+            if (mo < 10) mo = '0' + mo;
+            if (d < 10) d = '0' + d;
+            if (h < 10) h = '0' + h;
+            if (mi < 10) mi = '0' + mi;
+            var clock = document.getElementById('nav-clock');
+            if (clock) {
+                clock.textContent = y + '/' + mo + '/' + d + ' ' + h + ':' + mi;
+            }
+        }
+        updateClock();
+        setInterval(updateClock, 30000);
+    })();
+    </script>
+</body>
+</html>

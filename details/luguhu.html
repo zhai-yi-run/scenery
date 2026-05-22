@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泸沽湖 - 山野秘境</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="../index.html" class="nav-logo">
+            <img src="../imgs/logo-icon.png" alt="山野秘境 Logo" class="logo-icon">
+            <span class="logo-text">山野秘境</span>
+        </a>
+        <ul class="nav-center">
+            <li><a href="../index.html">首页</a></li>
+            <li class="dropdown">
+                <a href="../destinations.html" class="active">精选路线<span class="arrow">&#9662;</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../regions/sichuan.html">四川</a></li>
+                    <li><a href="../regions/tibet.html">西藏</a></li>
+                    <li><a href="../regions/yunnan.html">云南</a></li>
+                    <li><a href="../regions/xinjiang.html">新疆</a></li>
+                </ul>
+            </li>
+            <li><a href="../guides.html">游记攻略</a></li>
+            <li><a href="../about.html">关于我们</a></li>
+        </ul>
+        <div class="nav-right">
+            <div class="nav-clock" id="nav-clock"></div>
+            <span class="nav-divider">|</span>
+            <div class="auth-links">
+                <a href="../login.html">登录</a>
+                <a href="../register.html">注册</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1597424327448-5e0d7a74b17c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="page-hero-content">
+            <h1>泸沽湖</h1>
+            <p>高原明珠，最后的母系氏族秘境。</p>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">首页</a><span>></span><a href="../destinations.html">精选路线</a><span>></span><a href="../regions/yunnan.html">云南</a><span>></span><a href="../categories/yunnan-nature.html">自然奇观</a><span>></span>泸沽湖
+    </div>
+
+    <div class="detail-container">
+        <h2>目的地概况</h2>
+        <p>泸沽湖位于云南省丽江市宁蒗县与四川省凉山州盐源县交界处，湖面海拔2690米，是中国最深的淡水湖之一，能见度可达12米。湖中有五个全岛、三个半岛和一个海堤连岛，形态各异。泸沽湖不仅以清澈湛蓝的湖水闻名，更因湖畔摩梭人保留的母系氏族文化和独特的"走婚"习俗而被称为"神秘的女儿国"。每年5月至10月，湖面上水性杨花盛开，洁白花朵漂浮在碧蓝湖面上，如诗如画。</p>
+
+        <img src="https://images.unsplash.com/photo-1597424327448-5e0d7a74b17c?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="泸沽湖">
+
+        <h2>基本信息</h2>
+        <ul class="info-list">
+            <li><strong>位置</strong>云南省丽江市宁蒗县 / 四川省凉山州盐源县</li>
+            <li><strong>海拔</strong>2690米（湖面）</li>
+            <li><strong>最佳季节</strong>5月—10月（水性杨花花期），9月—10月（秋高气爽）</li>
+            <li><strong>建议时长</strong>2—3天</li>
+            <li><strong>门票</strong>70元（待核实）</li>
+            <li><strong>级别</strong>国家级风景名胜区</li>
+        </ul>
+
+        <h2>游览路线推荐</h2>
+        <p>D1从丽江出发（车程约4小时），下午抵达大落水村或里格半岛安顿。傍晚沿湖漫步，在湖边看日落。D2环湖游览（全程约70公里）：大落水→里格观景台（经典心形湖湾视角）→尼塞村→小落水→走婚桥（草海）→洛水村。可骑电动车、自行车或包车环湖。D3上午乘猪槽船游湖（登里务比岛），午后返回丽江。</p>
+
+        <h2>实用贴士</h2>
+        <p>1. 从丽江到泸沽湖车程约4小时，多为盘山路，晕车者提前备药。<br>2. 环湖骑行需一定体力（约70公里），电动车更方便但注意电量。<br>3. 摩梭人的走婚习俗请尊重，未经允许不要拍摄当地人。<br>4. 夏季湖畔蚊虫较多，带好防蚊用品。</p>
+
+        <h2>周边推荐</h2>
+        <p>丽江古城（车程约4小时）、玉龙雪山（车程约4.5小时）、香格里拉（车程约6小时）。从四川方向可经西昌前往（车程约5小时）。</p>
+    </div>
+
+    <footer>
+        <p>© 2026 山野秘境</p>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" title="返回顶部">↑</button>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const backBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 50) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+        if (window.scrollY > 400) backBtn.classList.add('show'); else backBtn.classList.remove('show');
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        const backBtn = document.getElementById('back-to-top');
+        if (backBtn) backBtn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    });
+    </script>
+    <script>
+    (function() {
+        function updateClock() {
+            var now = new Date();
+            var y = now.getFullYear(), mo = now.getMonth() + 1, d = now.getDate(), h = now.getHours(), mi = now.getMinutes();
+            if (mo < 10) mo = '0' + mo; if (d < 10) d = '0' + d; if (h < 10) h = '0' + h; if (mi < 10) mi = '0' + mi;
+            var clock = document.getElementById('nav-clock');
+            if (clock) clock.textContent = y + '/' + mo + '/' + d + ' ' + h + ':' + mi;
+        }
+        updateClock(); setInterval(updateClock, 30000);
+    })();
+    </script>
+</body>
+</html>
