@@ -447,6 +447,7 @@ footer {
     justify-content: center;
 }
 
+.guide-card-content a { text-decoration: none; }
 .guide-card-content h3 {
     font-size: 20px;
     margin-bottom: 10px;
