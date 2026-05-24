@@ -14,7 +14,8 @@
       "Bash(curl -s http://localhost:8080/details/lhasa.html)",
       "Bash(claude *)",
       "Bash(uv run *)",
-      "PowerShell(python -c \"import zipfile; import xml.etree.ElementTree as ET; z = zipfile.ZipFile\\(r'E:\\\\zhuo\\\\ʵ�����ۺ�ʵ��-ָ����.docx', 'r'\\); f = z.open\\('word/document.xml'\\); tree = ET.parse\\(f\\); root = tree.getroot\\(\\); [print\\(''.join\\([t.text for t in p.iter\\('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}t'\\) if t.text]\\)\\) for p in root.iter\\('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}p'\\)]\")"
+      "PowerShell(python -c \"import zipfile; import xml.etree.ElementTree as ET; z = zipfile.ZipFile\\(r'E:\\\\zhuo\\\\ʵ�����ۺ�ʵ��-ָ����.docx', 'r'\\); f = z.open\\('word/document.xml'\\); tree = ET.parse\\(f\\); root = tree.getroot\\(\\); [print\\(''.join\\([t.text for t in p.iter\\('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}t'\\) if t.text]\\)\\) for p in root.iter\\('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}p'\\)]\")",
+      "Bash(git add *)"
     ]
   }
 }
