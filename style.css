@@ -271,7 +271,7 @@ footer {
 .page-hero {
     height: 45vh;
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-                url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+                url('imgs/common/common-team-hero-01.jpg') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -509,7 +509,7 @@ footer {
     align-items: center;
     justify-content: center;
     background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-                url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+                url('imgs/common/common-mountain-hero-01.jpg') center/cover;
 }
 
 .auth-container {
